@@ -1,0 +1,7 @@
+hts-cache/
+hts-log.txt
+cookies.txt
+*.log
+.DS_Store
+.vercel
+.env*

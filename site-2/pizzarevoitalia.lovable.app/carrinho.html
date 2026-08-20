@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- Mirrored from pizzarevoitalia.lovable.app/carrinho.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Aug 2026 04:41:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'../connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1063660512841116');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1063660512841116&amp;ev=PageView&amp;noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seu Carrinho | Pizzaria Italia</title>
+<link rel="stylesheet" href="css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',sans-serif;background:#fcfbf8;color:#111;padding-bottom:32px}
+  .topbar{background:linear-gradient(135deg,#006437 0%,#00522d 100%);height:62px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;box-shadow:0 3px 14px rgba(0,100,55,.28);position:sticky;top:0;z-index:200}
+  .topbar-back{width:38px;height:38px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.16);border-radius:11px;color:#fff;text-decoration:none;font-size:15px}
+  .topbar-title{display:flex;flex-direction:column;align-items:center;gap:1px}
+  .topbar-title strong{color:#fff;font-size:16px;font-weight:800}
+  .topbar-title span{color:rgba(255,255,255,.65);font-size:11px;font-weight:600}
+  .topbar-spacer{width:38px}
+  .container{max-width:480px;margin:0 auto;padding:16px}
+  h1{font-size:22px;font-weight:800;margin:18px 0 14px;color:#222}
+  .produto{display:flex;align-items:center;background:#fff;border-radius:14px;padding:12px;margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+  .produto img{width:70px;height:70px;object-fit:cover;border-radius:10px;margin-right:12px;background:#f5f5f5}
+  .produto-info{flex:1;min-width:0}
+  .produto-info strong{display:block;font-size:14px;margin-bottom:4px;color:#222;font-weight:700}
+  .produto-info .obs{font-size:12px;color:#777;margin-bottom:4px}
+  .produto-info .preco{font-size:16px;font-weight:800;color:#006437}
+  .qty-box{display:inline-flex;align-items:center;background:#f4f4f4;border-radius:999px;padding:3px;margin-top:6px}
+  .qty-box button{width:26px;height:26px;border:none;background:#fff;border-radius:50%;font-weight:900;cursor:pointer;color:#006437}
+  .qty-box span{min-width:26px;text-align:center;font-weight:800;font-size:13px}
+  .produto .remove{background:none;border:none;color:#bbb;font-size:22px;cursor:pointer;padding:6px;margin-left:6px}
+  .produto .remove:hover{color:#dc2626}
+  .total-box{background:#fff;border-radius:16px;padding:18px;margin-top:14px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+  .resumo-tabela{width:100%;border-collapse:collapse;margin-bottom:12px}
+  .resumo-tabela tr td{padding:9px 0;font-size:14px;color:#555;border-bottom:1px solid #f3f3f3}
+  .resumo-tabela tr td:last-child{text-align:right;font-weight:700;color:#333}
+  .resumo-tabela tr.frete-row td:last-child{color:#16a34a;font-weight:800}
+  .resumo-tabela tr.total-row td{border-bottom:none;border-top:2px solid #f0f0f0;padding-top:12px;font-size:16px;font-weight:800;color:#111}
+  .resumo-tabela tr.total-row td:last-child{font-size:20px;color:#006437;font-weight:900}
+  .btn-finalizar{width:100%;padding:16px;font-weight:900;font-size:16px;border-radius:14px;border:none;cursor:pointer;background:linear-gradient(135deg,#006437 0%,#00522d 100%);color:#fff;box-shadow:0 6px 20px rgba(0,100,55,.32);text-transform:uppercase;letter-spacing:.5px;margin-top:6px}
+  .btn-finalizar:active{transform:scale(.98)}
+  .btn-comprar-mais{width:100%;padding:14px;font-weight:800;font-size:14px;border-radius:12px;border:2px solid #006437;background:#fff;color:#006437;margin-top:10px;cursor:pointer;text-decoration:none;display:block;text-align:center}
+  .carrinho-vazio{background:#fff;padding:40px 20px;border-radius:16px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+  .carrinho-vazio i{font-size:56px;color:#ddd;margin-bottom:14px}
+  .carrinho-vazio h2{font-size:18px;margin-bottom:8px;color:#333;font-weight:800}
+  .carrinho-vazio p{font-size:13px;color:#777;margin-bottom:20px}
+  .frete-tag{display:inline-flex;align-items:center;gap:6px;background:#dcfce7;color:#166534;font-size:11px;font-weight:800;padding:4px 10px;border-radius:999px;margin-bottom:10px}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a href="home.html" class="topbar-back"><i class="fas fa-arrow-left"></i></a>
+  <div class="topbar-title"><strong>Meu carrinho</strong><span>Pizzaria Italia</span></div>
+  <div class="topbar-spacer"></div>
+</header>
+
+<div class="container">
+  <h1>Seu pedido</h1>
+  <span class="frete-tag"><i class="fas fa-motorcycle"></i> Envio gratis · Entrega ate 30 min</span>
+  <div id="itens"></div>
+
+  <div id="totalWrap" class="total-box" style="display:none">
+    <table class="resumo-tabela">
+      <tr><td>Subtotal</td><td id="subtotal">R$ 0,00</td></tr>
+      <tr class="frete-row"><td>Entrega</td><td>GRATIS</td></tr>
+      <tr class="total-row"><td>Total</td><td id="total">R$ 0,00</td></tr>
+    </table>
+    <button class="btn-finalizar" onclick="finalizar()"><i class="fas fa-check-circle"></i> Finalizar pedido</button>
+    <a href="home.html" class="btn-comprar-mais">Continuar comprando</a>
+  </div>
+</div>
+
+<script>
+const CART_KEY='pizza_cart_v1';
+const money=v=>'R$ '+Number(v||0).toFixed(2).replace('.',',');
+function readCart(){try{return JSON.parse(localStorage.getItem(CART_KEY)||'[]')}catch(e){return []}}
+function saveCart(c){localStorage.setItem(CART_KEY,JSON.stringify(c));render()}
+function change(idx,d){const c=readCart();if(!c[idx])return;c[idx].qty=Math.max(1,(c[idx].qty||1)+d);saveCart(c)}
+function remove(idx){const c=readCart();c.splice(idx,1);saveCart(c)}
+function render(){
+  const c=readCart();
+  const box=document.getElementById('itens');
+  const wrap=document.getElementById('totalWrap');
+  if(!c.length){
+    wrap.style.display='none';
+    box.innerHTML=`<div class="carrinho-vazio"><i class="fas fa-shopping-basket"></i><h2>Seu carrinho esta vazio</h2><p>Adicione produtos para continuar.</p><a href="/home.html" class="btn-comprar-mais">Ver cardapio</a></div>`;
+    return;
+  }
+  box.innerHTML=c.map((i,idx)=>{
+    const img=(i.img||'/images/supercombo.png').replace('index.html','index.html');
+    return `<div class="produto">
+      <img src="${img}" alt="" onerror="this.src='/images/supercombo.png'">
+      <div class="produto-info">
+        <strong>${i.plan||'Item do pedido'}</strong>
+        ${i.refri?`<div class="obs">${i.refri}</div>`:''}
+        ${i.observacao?`<div class="obs">Obs: ${i.observacao}</div>`:''}
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:4px">
+          <div class="qty-box"><button onclick="change(${idx},-1)">−</button><span>${i.qty||1}</span><button onclick="change(${idx},1)">+</button></div>
+          <div class="preco">${money(Number(i.total||0)*(i.qty||1))}</div>
+        </div>
+      </div>
+      <button class="remove" onclick="remove(${idx})" title="Remover">×</button>
+    </div>`;
+  }).join('');
+  const subtotal=c.reduce((s,i)=>s+Number(i.total||0)*(i.qty||1),0);
+  document.getElementById('subtotal').textContent=money(subtotal);
+  document.getElementById('total').textContent=money(subtotal);
+  wrap.style.display='block';
+}
+function finalizar(){
+  const c=readCart(); if(!c.length) return;
+  location.href='checkout.html';
+}
+render();
+</script>
+</body>
+
+<!-- Mirrored from pizzarevoitalia.lovable.app/carrinho.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Aug 2026 04:41:36 GMT -->
+</html>

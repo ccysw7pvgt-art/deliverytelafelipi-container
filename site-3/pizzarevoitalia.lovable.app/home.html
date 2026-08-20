@@ -1,0 +1,972 @@
+<!DOCTYPE html><html lang="pt-br">
+<!-- Mirrored from pizzarevoitalia.lovable.app/home.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Aug 2026 04:41:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'../connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1063660512841116');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1063660512841116&amp;ev=PageView&amp;noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<script>
+  window.googlePixelId = "68790cbeda00c26c43b3fa8b";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "../cdn.utmify.com.br/scripts/pixel/pixel-google.js");
+  document.head.appendChild(a);
+</script><script async="" defer="" src="js/pixel-google.js"></script>
+
+<script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-18254407737">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18254407737');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria Italia | Delivery Online</title>
+    <script src="js/pixel-events.js"></script>
+<script src="https://cdn.tailwindcss.com/"></script>
+    <link href="css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap');
+        
+        /* BLOQUEIO DE SELECAO DE TEXTO E IMAGENS */
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #f4f4f5; 
+            -webkit-user-select: none;  /* Safari */
+            -moz-user-select: none;     /* Firefox */
+            -ms-user-select: none;      /* IE10+ */
+            user-select: none;          /* Padrao */
+        }
+        
+        img {
+            pointer-events: none; /* Impede arrastar imagens */
+        }
+
+        .timer-box { box-shadow: 0 4px 15px rgba(220, 38, 38, 0.2); }
+        .card-shadow { box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .banner-top { background: #dc2626; }
+        .premium-box { background: linear-gradient(135deg, #004d2a 0%, #006437 100%); border: 2px solid #fbbf24; }
+        .special-btn { background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%); transition: all 0.3s; }
+        
+        @keyframes pulse-green {
+            0% { transform: scale(0.95); opacity: 0.7; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(0.95); opacity: 0.7; }
+        }
+        .animate-pulse-fast { animation: pulse-green 1.5s infinite; }
+
+        @keyframes pulse-soft {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        .animate-card-pulse { 
+            animation: pulse-soft 2s infinite ease-in-out;
+            border: 2px solid #f97316 !important;
+        }
+        .burger-card-compact{min-height:142px}
+        .burger-card-compact img{width:118px!important;height:118px!important}
+        .drink-card-premium{min-width:145px}
+        .drink-card-premium img{height:118px;object-fit:contain;background:linear-gradient(180deg,#fff,#f8fafc);padding:10px}
+        @media(max-width:640px){.burger-card-compact{gap:12px!important;padding:12px!important}.burger-card-compact img{width:104px!important;height:104px!important}.burger-card-compact h3{font-size:15px}.burger-card-compact .burger-price{font-size:20px}}
+
+    </style>
+
+<style>
+  .scarcity-wrap{margin:10px 0 8px;}
+  .scarcity-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:5px;}
+  .scarcity-label{display:inline-flex;align-items:center;gap:6px;background:#fff1f2;color:#e11d48;border:1px solid #fecdd3;border-radius:999px;padding:4px 9px;font-size:11px;font-weight:900;letter-spacing:.02em;text-transform:uppercase;}
+  .scarcity-live{font-size:10px;font-weight:900;color:#991b1b;text-transform:uppercase;animation:scarcityBlink 1.2s infinite;}
+  .scarcity-bar{height:8px;background:#fee2e2;border-radius:999px;overflow:hidden;box-shadow:inset 0 1px 2px rgba(0,0,0,.08);}
+  .scarcity-fill{height:100%;background:linear-gradient(90deg,#ef4444,#f97316,#facc15);border-radius:999px;animation:scarcityPulse 1.4s infinite;}
+  .cart-scarcity{margin-top:8px;background:#fff7ed;border:1px solid #fed7aa;color:#c2410c;border-radius:14px;padding:7px 9px;font-size:11px;font-weight:900;display:flex;align-items:center;gap:6px;}
+  @keyframes scarcityPulse{0%,100%{filter:brightness(1)}50%{filter:brightness(1.18)}}
+  @keyframes scarcityBlink{0%,100%{opacity:1}50%{opacity:.55}}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-18245612995"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18245612995');
+</script>
+
+</head>
+<body class="pb-10"> <div class="banner-top text-white text-center py-2 text-xs font-bold uppercase tracking-widest sticky top-0 z-50">
+        <i class="fas fa-fire mr-2"></i> Promocao combo encerra em: <span id="top-timer">25:00</span>
+    </div>
+
+    <header class="bg-white px-4 pt-6 pb-6 rounded-b-[40px] shadow-sm text-center">
+        <div class="flex justify-center mb-4">
+            <div class="w-32 h-32 bg-gray-100 rounded-full flex items-center justify-center border-4 border-white shadow-md overflow-hidden">
+                <img src="images/Red-and-Black-Pizza-Restaurant-Logo.png" alt="Logo Italia" class="w-full h-full object-cover" loading="lazy" decoding="async">
+            </div>
+        </div>
+        <h1 class="text-2xl md:text-3xl font-extrabold text-[#006437] mb-2">Pizzaria Italia</h1>
+        <div class="text-[#006437] font-bold text-sm mb-4">
+            Tempo de Entrega <span class="bg-green-100 px-2 py-0.5 rounded text-green-700">ate 30 min</span>
+        </div>
+        <div class="flex flex-wrap justify-center items-center gap-3 text-sm font-semibold text-gray-700 border-t border-gray-100 pt-4">
+            <span class="text-gray-300">•</span>
+            <span class="text-green-600 font-bold">Envio Gratis para <span id="cidade-usuario">sua regiao</span></span>
+        </div>
+        <div class="mt-2 flex justify-center">
+    <div class="flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-1 rounded-full text-xs font-semibold">
+        <i class="fas fa-location-arrow text-red-500"></i>
+        <span>Estamos a <b>1,6 km</b> de voce</span>
+    </div>
+</div>
+
+        <div class="mt-4 flex justify-center">
+            <div class="bg-green-100 text-green-700 px-6 py-1 rounded-full text-xs font-black flex items-center gap-2">
+                <span class="h-2 w-2 bg-green-500 rounded-full animate-pulse-fast"></span> ABERTO AGORA
+            </div>
+        </div>
+    </header>
+    
+    <div id="menu-pizzas" class="max-w-4xl mx-auto px-4 mt-8 mb-6">
+        <h2 class="text-2xl font-extrabold text-gray-800 uppercase tracking-tighter italic">Super Combos 🍕</h2>
+        <p class="text-red-600 font-bold italic">Os favoritos da galera</p>
+    </div>
+
+    <main class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+        
+        <div onclick="location.href='produtos/01.html'" class="bg-white p-4 rounded-3xl flex gap-5 card-shadow cursor-pointer active:scale-95 transition">
+            <img src="images/supercombo.png" class="w-36 h-32 md:w-40 md:h-36 object-cover rounded-2xl" loading="lazy" decoding="async">
+            <div class="flex-1">
+                <h3 class="font-bold text-gray-800 leading-tight mb-1">02 Pizzas PP + 1 Refrigerante 1 Litro</h3>
+                <p class="text-gray-500 text-xs mb-2">ESCOLHA OS SABORES</p>
+                <div class="flex justify-between items-end">
+                    <span class="font-bold text-2xl text-gray-900">R$ 32,90</span>
+                    <button class="w-8 h-8 rounded-full bg-red-500 text-white flex items-center justify-center"><i class="fas fa-plus text-xs"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div onclick="location.href='produtos/02.html'" class="bg-white p-4 rounded-3xl flex gap-5 card-shadow cursor-pointer active:scale-95 transition">
+            <img src="images/supercombo.png" class="w-36 h-32 md:w-40 md:h-36 object-cover rounded-2xl" loading="lazy" decoding="async">
+            <div class="flex-1">
+                <h3 class="font-bold text-gray-800 leading-tight mb-1">02 Pizzas P + 1 Refrigerante 1 Litro</h3>
+                <p class="text-gray-500 text-xs mb-2">ESCOLHA OS SABORES</p>
+                <div class="flex justify-between items-end">
+                    <span class="font-bold text-2xl text-gray-900">R$ 49,90</span>
+                    <button class="w-8 h-8 rounded-full bg-red-500 text-white flex items-center justify-center"><i class="fas fa-plus text-xs"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div onclick="location.href='produtos/03.html'" class="bg-white p-4 rounded-3xl flex gap-5 card-shadow cursor-pointer active:scale-95 transition">
+            <img src="images/supercombo.png" class="w-36 h-32 md:w-40 md:h-36 object-cover rounded-2xl" loading="lazy" decoding="async">
+            <div class="flex-1">
+                <h3 class="font-bold text-gray-800 leading-tight mb-1">02 Pizzas M + 1 Refrigerante 2 Litros</h3>
+                <p class="text-gray-500 text-xs mb-2">ESCOLHA OS SABORES</p>
+                <div class="flex justify-between items-end">
+                    <span class="font-bold text-2xl text-gray-900">R$ 55,90</span>
+                    <button class="w-8 h-8 rounded-full bg-red-500 text-white flex items-center justify-center"><i class="fas fa-plus text-xs"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <a href="produtos/04.html" class="bg-white p-4 rounded-3xl flex gap-5 card-shadow cursor-pointer active:scale-95 transition relative overflow-hidden border border-gray-100">
+            <img src="images/supercombo.png" class="w-36 h-32 md:w-40 md:h-36 object-cover rounded-2xl" loading="lazy" decoding="async">
+            <div class="flex-1">
+                <h3 class="font-bold text-gray-800 leading-tight mb-1 pr-16">02 Pizzas G + 1 Refrigerante 2 Litros</h3>
+                <p class="text-gray-500 text-xs mb-2">ESCOLHA OS SABORES</p>
+                <div class="scarcity-wrap">
+                    <div class="scarcity-top"><span class="scarcity-label"><i class="fas fa-fire"></i>Restam 03 unidades</span><span class="scarcity-live">acabando</span></div>
+                    <div class="scarcity-bar"><div class="scarcity-fill" style="width:55%"></div></div>
+                </div>
+                <div class="flex justify-between items-end">
+                    <span class="font-bold text-2xl text-[#006437]">R$ 64,90</span>
+                    <div class="w-8 h-8 rounded-full bg-red-500 text-white flex items-center justify-center"><i class="fas fa-plus text-xs"></i></div>
+                </div>
+            </div>
+        </a>
+
+        <a href="produtos/05.html" class="animate-card-pulse bg-white p-4 rounded-3xl flex gap-5 card-shadow cursor-pointer active:scale-95 transition relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-orange-500 text-white text-[10px] font-black px-3 py-1 rounded-bl-xl uppercase tracking-tighter z-10">
+                Mais Pedida
+            </div>
+            <img src="images/supercombo.png" class="w-36 h-32 md:w-40 md:h-36 object-cover rounded-2xl" loading="lazy" decoding="async">
+            <div class="flex-1">
+                <h3 class="font-bold text-gray-800 leading-tight mb-1 pr-16">02 Pizzas Gigantes + 2 Refrigerantes 2 Litros</h3>
+                <p class="text-gray-500 text-xs mb-2">ESCOLHA OS SABORES</p>
+                <div class="scarcity-wrap">
+                    <div class="scarcity-top"><span class="scarcity-label"><i class="fas fa-fire"></i>Restam 02 unidades</span><span class="scarcity-live">acabando</span></div>
+                    <div class="scarcity-bar"><div class="scarcity-fill" style="width:38%"></div></div>
+                </div>
+                <div class="flex justify-between items-end">
+                    <span class="font-bold text-2xl text-gray-900">R$ 73,80</span>
+                    <div class="w-8 h-8 rounded-full bg-red-500 text-white flex items-center justify-center"><i class="fas fa-plus text-xs"></i></div>
+                </div>
+            </div>
+        </a>
+
+        <a href="produtos/06.html" class="animate-card-pulse bg-white p-4 rounded-3xl flex gap-5 card-shadow cursor-pointer active:scale-95 transition relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-orange-500 text-white text-[10px] font-black px-3 py-1 rounded-bl-xl uppercase tracking-tighter z-10">
+                Mais Pedida
+            </div>
+            <img src="images/supercombo.png" class="w-36 h-32 md:w-40 md:h-36 object-cover rounded-2xl" loading="lazy" decoding="async">
+            <div class="flex-1">
+                <h3 class="font-bold text-gray-800 text-[14px] leading-tight mb-1 pr-16">03 Pizzas Gigantes + 2 Refrigerantes 2 Litros</h3>
+                <p class="text-gray-500 text-xs mb-2">ESCOLHA OS SABORES</p>
+                <div class="scarcity-wrap">
+                    <div class="scarcity-top"><span class="scarcity-label"><i class="fas fa-fire"></i>Restam 01 unidades</span><span class="scarcity-live">acabando</span></div>
+                    <div class="scarcity-bar"><div class="scarcity-fill" style="width:22%"></div></div>
+                </div>
+                <div class="flex justify-between items-end">
+                    <span class="font-bold text-2xl text-gray-900">R$ 99,80</span>
+                    <div class="w-8 h-8 rounded-full bg-red-500 text-white flex items-center justify-center"><i class="fas fa-plus text-xs"></i></div>
+                </div>
+            </div>
+        </a>
+    </main>
+
+    <div class="max-w-4xl mx-auto px-4 mt-8 mb-6">
+        <h2 class="text-2xl font-extrabold text-gray-800">Combos Especiais</h2>
+        <p class="text-red-600 font-bold italic">1 Pizza Media + 01 Refri 1L</p>
+    </div>
+
+   <main class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-4" id="specialComboGrid">
+    <div onclick="openSpecialComboModal('combo-calabresa')" class="bg-white p-4 rounded-3xl flex gap-5 card-shadow cursor-pointer active:scale-95 transition border border-gray-100">
+        <img src="images/calabresa.webp" class="w-36 h-32 md:w-40 md:h-36 object-cover rounded-2xl" loading="lazy" decoding="async">
+        <div class="flex-1">
+            <h3 class="font-bold text-gray-800 leading-tight mb-1">01 Pizza Media Calabresa + 01 Refri 1L</h3>
+            <p class="text-gray-500 text-xs mb-2">Escolha o refrigerante de 1 litro ao abrir</p>
+            <div class="flex justify-between items-end"><span class="font-bold text-2xl text-gray-900">R$ 49,90</span><button class="w-8 h-8 rounded-full bg-red-500 text-white flex items-center justify-center"><i class="fas fa-plus text-xs"></i></button></div>
+        </div>
+    </div>
+
+    <div onclick="openSpecialComboModal('combo-carne-de-sol')" class="bg-white p-4 rounded-3xl flex gap-5 card-shadow cursor-pointer active:scale-95 transition border border-gray-100">
+        <img src="images/carnedesol.webp" class="w-36 h-32 md:w-40 md:h-36 object-cover rounded-2xl" loading="lazy" decoding="async">
+        <div class="flex-1">
+            <h3 class="font-bold text-gray-800 leading-tight mb-1">01 Pizza Media Carne de Sol + 01 Refri 1L</h3>
+            <p class="text-gray-500 text-xs mb-2">Escolha o refrigerante de 1 litro ao abrir</p>
+            <div class="flex justify-between items-end"><span class="font-bold text-2xl text-gray-900">R$ 49,90</span><button class="w-8 h-8 rounded-full bg-red-500 text-white flex items-center justify-center"><i class="fas fa-plus text-xs"></i></button></div>
+        </div>
+    </div>
+
+    <div onclick="openSpecialComboModal('combo-marguerita')" class="bg-white p-4 rounded-3xl flex gap-5 card-shadow cursor-pointer active:scale-95 transition border border-gray-100">
+        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&amp;fit=crop&amp;w=300&amp;q=80" class="w-36 h-32 md:w-40 md:h-36 object-cover rounded-2xl" loading="lazy" decoding="async">
+        <div class="flex-1">
+            <h3 class="font-bold text-gray-800 leading-tight mb-1">01 Pizza Media Marguerita + 01 Refri 1L</h3>
+            <p class="text-gray-500 text-xs mb-2">Escolha o refrigerante de 1 litro ao abrir</p>
+            <div class="flex justify-between items-end"><span class="font-bold text-2xl text-gray-900">R$ 49,90</span><button class="w-8 h-8 rounded-full bg-red-500 text-white flex items-center justify-center"><i class="fas fa-plus text-xs"></i></button></div>
+        </div>
+    </div>
+
+    <div onclick="openSpecialComboModal('combo-frango-catupiry')" class="bg-white p-4 rounded-3xl flex gap-5 card-shadow cursor-pointer active:scale-95 transition border border-gray-100">
+        <img src="images/frango.webp" class="w-36 h-32 md:w-40 md:h-36 object-cover rounded-2xl" loading="lazy" decoding="async">
+        <div class="flex-1">
+            <h3 class="font-bold text-gray-800 leading-tight mb-1">01 Pizza Media Frango Catupiry + 01 Refri 1L</h3>
+            <p class="text-gray-500 text-xs mb-2">Escolha o refrigerante de 1 litro ao abrir</p>
+            <div class="flex justify-between items-end"><span class="font-bold text-2xl text-[#006437]">R$ 49,90</span><button class="w-8 h-8 rounded-full bg-red-500 text-white flex items-center justify-center"><i class="fas fa-plus text-xs"></i></button></div>
+        </div>
+    </div>
+
+    <div onclick="openSpecialComboModal('combo-portuguesa')" class="bg-white p-4 rounded-3xl flex gap-5 card-shadow cursor-pointer active:scale-95 transition border border-gray-100">
+        <img src="images/portuguesa.webp" class="w-36 h-32 md:w-40 md:h-36 object-cover rounded-2xl" loading="lazy" decoding="async">
+        <div class="flex-1">
+            <h3 class="font-bold text-gray-800 leading-tight mb-1">01 Pizza Media Portuguesa + 01 Refri 1L</h3>
+            <p class="text-gray-500 text-xs mb-2">Escolha o refrigerante de 1 litro ao abrir</p>
+            <div class="flex justify-between items-end"><span class="font-bold text-2xl text-gray-900">R$ 49,90</span><button class="w-8 h-8 rounded-full bg-red-500 text-white flex items-center justify-center"><i class="fas fa-plus text-xs"></i></button></div>
+        </div>
+    </div>
+
+    <div onclick="openSpecialComboModal('combo-tres-queijos')" class="bg-white p-4 rounded-3xl flex gap-5 card-shadow cursor-pointer active:scale-95 transition border border-gray-100">
+        <img src="images/tres.webp" class="w-36 h-32 md:w-40 md:h-36 object-cover rounded-2xl" loading="lazy" decoding="async">
+        <div class="flex-1">
+            <h3 class="font-bold text-gray-800 leading-tight mb-1">01 Pizza Media Tres Queijos + 01 Refri 1L</h3>
+            <p class="text-gray-500 text-xs mb-2">Escolha o refrigerante de 1 litro ao abrir</p>
+            <div class="flex justify-between items-end"><span class="font-bold text-2xl text-gray-900">R$ 49,90</span><button class="w-8 h-8 rounded-full bg-red-500 text-white flex items-center justify-center"><i class="fas fa-plus text-xs"></i></button></div>
+        </div>
+    </div>
+
+</main>
+
+<section id="hamburgues" class="max-w-4xl mx-auto px-4 mt-10">
+  <div class="flex items-end justify-between gap-3 mb-4">
+    <div>
+      <p class="text-xs font-black text-red-600 uppercase tracking-[0.22em]">Novidade</p>
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">Hamburgueres Artesanais 🍔</h2>
+      <p class="text-gray-500 font-semibold text-sm mt-1">Todos acompanham batata frita crocante + 01 refrigerante lata.</p>
+    </div>
+    <span class="hidden md:inline-flex bg-green-100 text-green-700 font-black text-xs px-4 py-2 rounded-full">Entrega ate 30 min</span>
+  </div>
+  <div id="burgerGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4"><div onclick="openBurgerModal('classic-burger')" class="burger-card-compact bg-white p-3 rounded-3xl flex gap-4 card-shadow cursor-pointer active:scale-95 transition border border-gray-100 overflow-hidden"><img src="images/h1.webp" class="w-28 h-28 object-cover rounded-2xl" loading="lazy" decoding="async"><div class="flex-1 min-w-0"><h3 class="font-black text-gray-900 leading-tight mb-1">Classic Burger</h3><p class="text-[11px] text-gray-500 font-bold mb-2 line-clamp-2">Pao brioche • Hamburguer bovino 150g • Queijo cheddar derretido • Alface</p><span class="inline-flex bg-red-50 text-red-600 text-[10px] font-black px-2 py-1 rounded-full mb-2">+ batata e refri lata</span><div class="flex justify-between items-end"><span class="burger-price font-black text-2xl text-gray-900">R$ 22,00</span><button class="w-8 h-8 rounded-full bg-red-600 text-white"><i class="fas fa-plus text-xs"></i></button></div></div></div><div onclick="openBurgerModal('cheddar-bacon')" class="burger-card-compact bg-white p-3 rounded-3xl flex gap-4 card-shadow cursor-pointer active:scale-95 transition border border-gray-100 overflow-hidden"><img src="images/h2.webp" class="w-28 h-28 object-cover rounded-2xl" loading="lazy" decoding="async"><div class="flex-1 min-w-0"><h3 class="font-black text-gray-900 leading-tight mb-1">Cheddar Bacon</h3><p class="text-[11px] text-gray-500 font-bold mb-2 line-clamp-2">Pao brioche • Hamburguer bovino 180g • Cheddar cremoso • Bacon dourado crocante</p><span class="inline-flex bg-red-50 text-red-600 text-[10px] font-black px-2 py-1 rounded-full mb-2">+ batata e refri lata</span><div class="flex justify-between items-end"><span class="burger-price font-black text-2xl text-gray-900">R$ 29,90</span><button class="w-8 h-8 rounded-full bg-red-600 text-white"><i class="fas fa-plus text-xs"></i></button></div></div></div><div onclick="openBurgerModal('double-smash')" class="burger-card-compact bg-white p-3 rounded-3xl flex gap-4 card-shadow cursor-pointer active:scale-95 transition border border-gray-100 overflow-hidden"><img src="images/h3.webp" class="w-28 h-28 object-cover rounded-2xl" loading="lazy" decoding="async"><div class="flex-1 min-w-0"><h3 class="font-black text-gray-900 leading-tight mb-1">Double Smash</h3><p class="text-[11px] text-gray-500 font-bold mb-2 line-clamp-2">Pao brioche • 2 hamburgueres smash 90g • Duplo cheddar derretido • Picles</p><span class="inline-flex bg-red-50 text-red-600 text-[10px] font-black px-2 py-1 rounded-full mb-2">+ batata e refri lata</span><div class="flex justify-between items-end"><span class="burger-price font-black text-2xl text-gray-900">R$ 32,90</span><button class="w-8 h-8 rounded-full bg-red-600 text-white"><i class="fas fa-plus text-xs"></i></button></div></div></div><div onclick="openBurgerModal('barbecue-supreme')" class="burger-card-compact bg-white p-3 rounded-3xl flex gap-4 card-shadow cursor-pointer active:scale-95 transition border border-gray-100 overflow-hidden"><img src="images/h4.webp" class="w-28 h-28 object-cover rounded-2xl" loading="lazy" decoding="async"><div class="flex-1 min-w-0"><h3 class="font-black text-gray-900 leading-tight mb-1">Barbecue Supreme</h3><p class="text-[11px] text-gray-500 font-bold mb-2 line-clamp-2">Pao australiano • Hamburguer bovino 180g • Queijo prato • Bacon dourado</p><span class="inline-flex bg-red-50 text-red-600 text-[10px] font-black px-2 py-1 rounded-full mb-2">+ batata e refri lata</span><div class="flex justify-between items-end"><span class="burger-price font-black text-2xl text-gray-900">R$ 34,90</span><button class="w-8 h-8 rounded-full bg-red-600 text-white"><i class="fas fa-plus text-xs"></i></button></div></div></div><div onclick="openBurgerModal('monster-burguer')" class="burger-card-compact bg-white p-3 rounded-3xl flex gap-4 card-shadow cursor-pointer active:scale-95 transition border border-gray-100 overflow-hidden"><img src="images/h5.webp" class="w-28 h-28 object-cover rounded-2xl" loading="lazy" decoding="async"><div class="flex-1 min-w-0"><h3 class="font-black text-gray-900 leading-tight mb-1">Monster Burguer</h3><p class="text-[11px] text-gray-500 font-bold mb-2 line-clamp-2">Pao brioche • 2 hamburgueres bovinos 150g • Duplo cheddar • Bacon crocante</p><span class="inline-flex bg-red-50 text-red-600 text-[10px] font-black px-2 py-1 rounded-full mb-2">+ batata e refri lata</span><div class="flex justify-between items-end"><span class="burger-price font-black text-2xl text-gray-900">R$ 39,90</span><button class="w-8 h-8 rounded-full bg-red-600 text-white"><i class="fas fa-plus text-xs"></i></button></div></div></div></div>
+</section>
+
+<section id="bebidas" class="max-w-4xl mx-auto px-4 mt-10 mb-6">
+  <div class="flex justify-between items-end mb-4">
+    <div>
+      <p class="text-xs font-black text-green-700 uppercase tracking-[0.22em]">Adicione ao pedido</p>
+      <h2 class="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">Bebidas</h2>
+    </div>
+    <span class="text-xs font-bold text-gray-400">Arraste para o lado</span>
+  </div>
+  <div id="drinkCarousel" class="flex gap-4 overflow-x-auto pb-4 snap-x scroll-smooth"><div class="drink-card-premium snap-start bg-white rounded-3xl p-3 card-shadow border border-gray-100"><img src="images/latacoca1.webp" class="w-full rounded-2xl mb-3" alt="Coca lata" loading="lazy" decoding="async"><h3 class="font-black text-sm text-gray-900 leading-tight min-h-[38px]">Coca lata</h3><div class="flex items-center justify-between mt-3"><span class="font-black text-green-700">R$ 5,90</span><button onclick="addDrinkToCart('coca-lata')" class="w-9 h-9 rounded-full bg-red-600 text-white shadow-lg"><i class="fas fa-plus text-xs"></i></button></div></div><div class="drink-card-premium snap-start bg-white rounded-3xl p-3 card-shadow border border-gray-100"><img src="images/latacoca2.webp" class="w-full rounded-2xl mb-3" alt="Coca lata Zero" loading="lazy" decoding="async"><h3 class="font-black text-sm text-gray-900 leading-tight min-h-[38px]">Coca lata Zero</h3><div class="flex items-center justify-between mt-3"><span class="font-black text-green-700">R$ 5,90</span><button onclick="addDrinkToCart('coca-lata-zero')" class="w-9 h-9 rounded-full bg-red-600 text-white shadow-lg"><i class="fas fa-plus text-xs"></i></button></div></div><div class="drink-card-premium snap-start bg-white rounded-3xl p-3 card-shadow border border-gray-100"><img src="images/lataguarana.webp" class="w-full rounded-2xl mb-3" alt="Guarana Antarctica lata" loading="lazy" decoding="async"><h3 class="font-black text-sm text-gray-900 leading-tight min-h-[38px]">Guarana Antarctica lata</h3><div class="flex items-center justify-between mt-3"><span class="font-black text-green-700">R$ 5,90</span><button onclick="addDrinkToCart('antartica-lata')" class="w-9 h-9 rounded-full bg-red-600 text-white shadow-lg"><i class="fas fa-plus text-xs"></i></button></div></div><div class="drink-card-premium snap-start bg-white rounded-3xl p-3 card-shadow border border-gray-100"><img src="images/lataf2.webp" class="w-full rounded-2xl mb-3" alt="Fanta lata" loading="lazy" decoding="async"><h3 class="font-black text-sm text-gray-900 leading-tight min-h-[38px]">Fanta lata</h3><div class="flex items-center justify-between mt-3"><span class="font-black text-green-700">R$ 5,90</span><button onclick="addDrinkToCart('fanta-lata')" class="w-9 h-9 rounded-full bg-red-600 text-white shadow-lg"><i class="fas fa-plus text-xs"></i></button></div></div><div class="drink-card-premium snap-start bg-white rounded-3xl p-3 card-shadow border border-gray-100"><img src="images/coca1l.webp" class="w-full rounded-2xl mb-3" alt="Coca 1L" loading="lazy" decoding="async"><h3 class="font-black text-sm text-gray-900 leading-tight min-h-[38px]">Coca 1L</h3><div class="flex items-center justify-between mt-3"><span class="font-black text-green-700">R$ 10,90</span><button onclick="addDrinkToCart('coca-1l')" class="w-9 h-9 rounded-full bg-red-600 text-white shadow-lg"><i class="fas fa-plus text-xs"></i></button></div></div><div class="drink-card-premium snap-start bg-white rounded-3xl p-3 card-shadow border border-gray-100"><img src="images/coca01ld.webp" class="w-full rounded-2xl mb-3" alt="Coca 1L Zero" loading="lazy" decoding="async"><h3 class="font-black text-sm text-gray-900 leading-tight min-h-[38px]">Coca 1L Zero</h3><div class="flex items-center justify-between mt-3"><span class="font-black text-green-700">R$ 10,90</span><button onclick="addDrinkToCart('coca-1l-zero')" class="w-9 h-9 rounded-full bg-red-600 text-white shadow-lg"><i class="fas fa-plus text-xs"></i></button></div></div><div class="drink-card-premium snap-start bg-white rounded-3xl p-3 card-shadow border border-gray-100"><img src="images/guaranaant1l.webp" class="w-full rounded-2xl mb-3" alt="Guarana Antarctica 1L" loading="lazy" decoding="async"><h3 class="font-black text-sm text-gray-900 leading-tight min-h-[38px]">Guarana Antarctica 1L</h3><div class="flex items-center justify-between mt-3"><span class="font-black text-green-700">R$ 10,90</span><button onclick="addDrinkToCart('antartica-1l')" class="w-9 h-9 rounded-full bg-red-600 text-white shadow-lg"><i class="fas fa-plus text-xs"></i></button></div></div><div class="drink-card-premium snap-start bg-white rounded-3xl p-3 card-shadow border border-gray-100"><img src="images/coca2l.webp" class="w-full rounded-2xl mb-3" alt="Coca 2L" loading="lazy" decoding="async"><h3 class="font-black text-sm text-gray-900 leading-tight min-h-[38px]">Coca 2L</h3><div class="flex items-center justify-between mt-3"><span class="font-black text-green-700">R$ 12,90</span><button onclick="addDrinkToCart('coca-2l')" class="w-9 h-9 rounded-full bg-red-600 text-white shadow-lg"><i class="fas fa-plus text-xs"></i></button></div></div><div class="drink-card-premium snap-start bg-white rounded-3xl p-3 card-shadow border border-gray-100"><img src="images/coca2ldiet.png" class="w-full rounded-2xl mb-3" alt="Coca 2L Zero" loading="lazy" decoding="async"><h3 class="font-black text-sm text-gray-900 leading-tight min-h-[38px]">Coca 2L Zero</h3><div class="flex items-center justify-between mt-3"><span class="font-black text-green-700">R$ 12,90</span><button onclick="addDrinkToCart('coca-2l-zero')" class="w-9 h-9 rounded-full bg-red-600 text-white shadow-lg"><i class="fas fa-plus text-xs"></i></button></div></div><div class="drink-card-premium snap-start bg-white rounded-3xl p-3 card-shadow border border-gray-100"><img src="images/gua2l.webp" class="w-full rounded-2xl mb-3" alt="Guarana 2L" loading="lazy" decoding="async"><h3 class="font-black text-sm text-gray-900 leading-tight min-h-[38px]">Guarana 2L</h3><div class="flex items-center justify-between mt-3"><span class="font-black text-green-700">R$ 12,90</span><button onclick="addDrinkToCart('antartica-2l')" class="w-9 h-9 rounded-full bg-red-600 text-white shadow-lg"><i class="fas fa-plus text-xs"></i></button></div></div><div class="drink-card-premium snap-start bg-white rounded-3xl p-3 card-shadow border border-gray-100"><img src="images/sprite2l.webp" class="w-full rounded-2xl mb-3" alt="Sprite 2L" loading="lazy" decoding="async"><h3 class="font-black text-sm text-gray-900 leading-tight min-h-[38px]">Sprite 2L</h3><div class="flex items-center justify-between mt-3"><span class="font-black text-green-700">R$ 12,90</span><button onclick="addDrinkToCart('sprite-2l')" class="w-9 h-9 rounded-full bg-red-600 text-white shadow-lg"><i class="fas fa-plus text-xs"></i></button></div></div><div class="drink-card-premium snap-start bg-white rounded-3xl p-3 card-shadow border border-gray-100"><img src="images/spritezero.webp" class="w-full rounded-2xl mb-3" alt="Sprite Zero 2L" loading="lazy" decoding="async"><h3 class="font-black text-sm text-gray-900 leading-tight min-h-[38px]">Sprite Zero 2L</h3><div class="flex items-center justify-between mt-3"><span class="font-black text-green-700">R$ 12,90</span><button onclick="addDrinkToCart('sprite-zero-2l')" class="w-9 h-9 rounded-full bg-red-600 text-white shadow-lg"><i class="fas fa-plus text-xs"></i></button></div></div><div class="drink-card-premium snap-start bg-white rounded-3xl p-3 card-shadow border border-gray-100"><img src="images/fata2l.webp" class="w-full rounded-2xl mb-3" alt="Fanta 2L" loading="lazy" decoding="async"><h3 class="font-black text-sm text-gray-900 leading-tight min-h-[38px]">Fanta 2L</h3><div class="flex items-center justify-between mt-3"><span class="font-black text-green-700">R$ 12,90</span><button onclick="addDrinkToCart('fanta-2l')" class="w-9 h-9 rounded-full bg-red-600 text-white shadow-lg"><i class="fas fa-plus text-xs"></i></button></div></div></div>
+</section>
+
+<div id="specialComboModal" class="fixed inset-0 bg-black/60 z-[79] hidden px-4 py-6 overflow-y-auto" onclick="if(event.target.id==='specialComboModal')closeSpecialComboModal()">
+  <div class="max-w-lg mx-auto bg-white rounded-[32px] overflow-hidden shadow-2xl">
+    <div class="relative h-56 bg-gray-100">
+      <img id="specialComboImg" src="#" class="w-full h-full object-cover" loading="lazy" decoding="async">
+      <button onclick="closeSpecialComboModal()" class="absolute top-4 right-4 w-11 h-11 rounded-full bg-white/95 text-gray-900 text-2xl shadow-lg">×</button>
+      <div class="absolute left-4 bottom-4 bg-black/80 text-white rounded-2xl px-4 py-2">
+        <p class="text-[10px] uppercase tracking-[0.2em] font-black text-yellow-300">Combo especial</p>
+        <h3 id="specialComboTitle" class="font-black text-xl leading-tight"></h3>
+      </div>
+    </div>
+    <div class="p-5">
+      <div class="flex justify-between items-center mb-4">
+        <span id="specialComboPrice" class="text-3xl font-black text-green-700"></span>
+        <span class="bg-red-100 text-red-700 text-xs font-black px-3 py-1 rounded-full">+ 01 refri 1L</span>
+      </div>
+      <div class="bg-gray-50 border border-gray-100 rounded-3xl p-4 mb-4">
+        <h4 class="font-black text-gray-900 mb-2">Inclui no combo</h4>
+        <ul id="specialComboItems" class="space-y-1 text-sm text-gray-600 font-semibold"></ul>
+      </div>
+      <label class="block font-black text-gray-900 mb-2">Escolha o refrigerante 1L incluso</label>
+      <select id="specialComboDrinkSelect" class="hidden">
+        <option>Coca-Cola 1L</option>
+        <option>Coca-Cola Zero 1L</option>
+        <option>Guarana Antarctica 1L</option>
+      </select>
+      <div id="specialComboDrinkCards" class="grid grid-cols-1 gap-3 mb-4">
+        <button type="button" data-drink="Coca-Cola 1L" onclick="selectSpecialComboDrink(this)" class="combo-drink-card border-2 border-red-500 bg-red-50 rounded-2xl p-3 flex items-center gap-3 text-left font-black text-gray-900 active:scale-95 transition"><img src="images/coca1l.webp" alt="Coca-Cola 1L" class="w-14 h-14 object-contain bg-white rounded-xl p-1 shadow-sm" loading="lazy" decoding="async"><span>Coca-Cola 1L</span></button>
+        <button type="button" data-drink="Coca-Cola Zero 1L" onclick="selectSpecialComboDrink(this)" class="combo-drink-card border-2 border-gray-100 bg-white rounded-2xl p-3 flex items-center gap-3 text-left font-black text-gray-900 active:scale-95 transition"><img src="images/coca01ld.webp" alt="Coca-Cola Zero 1L" class="w-14 h-14 object-contain bg-white rounded-xl p-1 shadow-sm" loading="lazy" decoding="async"><span>Coca-Cola Zero 1L</span></button>
+        <button type="button" data-drink="Guarana Antarctica 1L" onclick="selectSpecialComboDrink(this)" class="combo-drink-card border-2 border-gray-100 bg-white rounded-2xl p-3 flex items-center gap-3 text-left font-black text-gray-900 active:scale-95 transition"><img src="images/guaranaant1l.webp" alt="Guarana Antarctica 1L" class="w-14 h-14 object-contain bg-white rounded-xl p-1 shadow-sm" loading="lazy" decoding="async"><span>Guarana Antarctica 1L</span></button>
+      </div>
+      <label class="block font-black text-gray-900 mb-2">Observacoes do pedido</label>
+      <textarea id="specialComboObs" rows="3" placeholder="Ex: sem cebola, massa fina, tirar algum ingrediente..." class="w-full bg-gray-50 border-2 border-gray-100 rounded-2xl px-4 py-3 font-semibold text-gray-800 mb-5 outline-none focus:border-red-500"></textarea>
+      
+      <button onclick="addCurrentSpecialComboAndCheckout()" class="w-full mt-3 bg-red-600 text-white rounded-2xl py-4 font-black text-lg active:scale-95 transition">Finalizar agora</button>
+      <button onclick="addCurrentSpecialComboKeepShopping()" class="w-full mt-3 bg-gray-100 text-gray-900 rounded-2xl py-4 font-black text-lg active:scale-95 transition">Continuar comprando</button>
+    </div>
+  </div>
+</div>
+
+<div id="burgerModal" class="fixed inset-0 bg-black/60 z-[80] hidden px-4 py-6 overflow-y-auto" onclick="if(event.target.id==='burgerModal')closeBurgerModal()">
+  <div class="max-w-lg mx-auto bg-white rounded-[32px] overflow-hidden shadow-2xl">
+    <div class="relative h-56 bg-gray-100">
+      <img id="burgerModalImg" src="#" class="w-full h-full object-cover" loading="lazy" decoding="async">
+      <button onclick="closeBurgerModal()" class="absolute top-4 right-4 w-11 h-11 rounded-full bg-white/95 text-gray-900 text-2xl shadow-lg">×</button>
+      <div class="absolute left-4 bottom-4 bg-black/80 text-white rounded-2xl px-4 py-2">
+        <p class="text-[10px] uppercase tracking-[0.2em] font-black text-yellow-300">Combo burger</p>
+        <h3 id="burgerModalTitle" class="font-black text-xl leading-tight"></h3>
+      </div>
+    </div>
+    <div class="p-5">
+      <div class="flex justify-between items-center mb-4">
+        <span id="burgerModalPrice" class="text-3xl font-black text-green-700"></span>
+        <span class="bg-red-100 text-red-700 text-xs font-black px-3 py-1 rounded-full">+ batata e 01 refri lata</span>
+      </div>
+      <div class="bg-gray-50 border border-gray-100 rounded-3xl p-4 mb-4">
+        <h4 class="font-black text-gray-900 mb-2">Ingredientes</h4>
+        <ul id="burgerModalIngredients" class="space-y-1 text-sm text-gray-600 font-semibold"></ul>
+      </div>
+      <label class="block font-black text-gray-900 mb-2">Escolha o refrigerante lata incluso</label>
+      <select id="burgerDrinkSelect" class="hidden">
+        <option>Coca-Cola lata</option>
+        <option>Coca-Cola lata zero</option>
+        <option>Guarana Antarctica lata</option>
+        <option>Fanta lata</option>
+      </select>
+      <div id="burgerDrinkCards" class="grid grid-cols-2 gap-3 mb-4">
+        <button type="button" data-drink="Coca-Cola lata" onclick="selectBurgerDrink(this)" class="drink-card border-2 border-red-500 bg-red-50 rounded-2xl p-3 flex items-center gap-3 text-left font-black text-gray-900 active:scale-95 transition"><img src="images/latacoca1.webp" alt="Coca-Cola lata" class="w-14 h-14 object-contain bg-white rounded-xl p-1 shadow-sm" loading="lazy" decoding="async"><span>Coca-Cola lata</span></button>
+        <button type="button" data-drink="Coca-Cola lata zero" onclick="selectBurgerDrink(this)" class="drink-card border-2 border-gray-100 bg-white rounded-2xl p-3 flex items-center gap-3 text-left font-black text-gray-900 active:scale-95 transition"><img src="images/latacoca2.webp" alt="Coca-Cola lata zero" class="w-14 h-14 object-contain bg-white rounded-xl p-1 shadow-sm" loading="lazy" decoding="async"><span>Coca-Cola lata zero</span></button>
+        <button type="button" data-drink="Guarana Antarctica lata" onclick="selectBurgerDrink(this)" class="drink-card border-2 border-gray-100 bg-white rounded-2xl p-3 flex items-center gap-3 text-left font-black text-gray-900 active:scale-95 transition"><img src="images/lataguarana.webp" alt="Guarana Antarctica lata" class="w-14 h-14 object-contain bg-white rounded-xl p-1 shadow-sm" loading="lazy" decoding="async"><span>Guarana Antarctica lata</span></button>
+        <button type="button" data-drink="Fanta lata" onclick="selectBurgerDrink(this)" class="drink-card border-2 border-gray-100 bg-white rounded-2xl p-3 flex items-center gap-3 text-left font-black text-gray-900 active:scale-95 transition"><img src="images/lataf2.webp" alt="Fanta lata" class="w-14 h-14 object-contain bg-white rounded-xl p-1 shadow-sm" loading="lazy" decoding="async"><span>Fanta lata</span></button>
+      </div>
+      <label class="block font-black text-gray-900 mb-2">Observacoes do pedido</label>
+      <textarea id="burgerObs" rows="3" placeholder="Ex: sem cebola, ponto da carne, tirar picles..." class="w-full bg-gray-50 border-2 border-gray-100 rounded-2xl px-4 py-3 font-semibold text-gray-800 mb-5 outline-none focus:border-red-500"></textarea>
+      
+      <button onclick="addCurrentBurgerAndCheckout()" class="w-full mt-3 bg-red-600 text-white rounded-2xl py-4 font-black text-lg active:scale-95 transition">Finalizar agora</button>
+      <button onclick="addCurrentBurgerKeepShopping()" class="w-full mt-3 bg-gray-100 text-gray-900 rounded-2xl py-4 font-black text-lg active:scale-95 transition">Continuar comprando</button>
+    </div>
+  </div>
+</div>
+
+    <section class="max-w-xl mx-auto px-4 mt-8 mb-4">
+        <div class="bg-white rounded-2xl p-6 text-center shadow-sm border border-gray-100">
+            <h2 class="text-red-600 font-black text-lg mb-3 tracking-tight uppercase">A Promocao Encerra em:</h2>
+            <div id="timer" class="bg-red-600 text-white inline-block px-8 py-2 rounded-xl text-4xl font-black timer-box">
+                25:00
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-4 mt-12">
+        <div class="premium-box rounded-3xl p-8 text-center text-white shadow-2xl">
+            <p class="text-yellow-400 font-bold tracking-[0.3em] text-xs uppercase mb-2"></p>
+            <h2 class="text-3xl font-black mb-1 italic">MELHOR PIZZARIA DELIVERY</h2>
+            <p class="text-xl font-light tracking-widest mb-4">2024 - 2025</p>
+            <div class="flex justify-center gap-2 text-2xl text-yellow-400">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+        </div>
+    </section>
+
+<section class="max-w-6xl mx-auto px-4 mt-8 mb-8">
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="bg-white rounded-3xl p-3 shadow-lg">
+      <img src="images/cozinha.png" alt="Cozinha" class="w-full rounded-2xl">
+    </div>
+    <div class="bg-white rounded-3xl p-3 shadow-lg">
+      <img src="images/clientes.png" alt="Clientes" class="w-full rounded-2xl">
+    </div>
+  </div>
+</section>
+<section class="max-w-4xl mx-auto px-4 mt-12 mb-10">
+    <h3 class="text-center font-extrabold text-gray-800 mb-6 uppercase tracking-tight">
+        O que dizem nossos clientes
+    </h3>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/dep1.webp" alt="Cliente 1" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="text-gray-600 text-sm italic">"Massa crocante e muito recheio. A melhor que ja comi!"</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/dep07.webp" alt="Cliente 3" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="text-gray-600 text-sm italic">"Ingredientes de primeira. Nota 10 para a Pizzaria Italia."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/dep10.webp" alt="Cliente 4" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="text-gray-600 text-sm italic">"Sempre peco no final de semana, a entrega e muito rapida."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/dep20.webp" alt="Cliente 5" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="text-gray-600 text-sm italic">"Excelente. Recomendo!"</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/dep06.webp" alt="Cliente 6" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="text-gray-600 text-sm italic">"A melhor pizza da regiao, sem duvidas. Preco justo."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/pizzafoto.webp" alt="Avaliacao cliente 7" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-black text-gray-800 text-sm mb-1">Mariana Lopes • Aguas Claras</p>
+            <p class="text-[11px] text-gray-400 font-bold mb-2">ha 2 dias</p>
+            <p class="text-gray-600 text-sm italic">"Pizza chegou quentinha, bem recheada e com a massa no ponto. Virou minha pizzaria favorita."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/calabresa.webp" alt="Avaliacao cliente 8" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-black text-gray-800 text-sm mb-1">Rafael Oliveira • Asa Norte</p>
+            <p class="text-[11px] text-gray-400 font-bold mb-2">ha 3 dias</p>
+            <p class="text-gray-600 text-sm italic">"A calabresa veio caprichada e a entrega foi rapida. Atendimento muito educado."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/frango.webp" alt="Avaliacao cliente 9" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-black text-gray-800 text-sm mb-1">Camila Santos • Guara</p>
+            <p class="text-[11px] text-gray-400 font-bold mb-2">ha 4 dias</p>
+            <p class="text-gray-600 text-sm italic">"Pedi frango com catupiry e veio muito cremosa, bem embalada e saborosa."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/portuguesa.webp" alt="Avaliacao cliente 10" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-black text-gray-800 text-sm mb-1">Bruno Costa • Taguatinga</p>
+            <p class="text-[11px] text-gray-400 font-bold mb-2">ha 5 dias</p>
+            <p class="text-gray-600 text-sm italic">"Pizza grande de verdade, bastante recheio e preco justo pelo combo."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/tres.webp" alt="Avaliacao cliente 11" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-black text-gray-800 text-sm mb-1">Ana Beatriz • Asa Sul</p>
+            <p class="text-[11px] text-gray-400 font-bold mb-2">ha 1 semana</p>
+            <p class="text-gray-600 text-sm italic">"A de tres queijos e maravilhosa. Massa leve, queijo bom e chegou antes do prazo."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/carnedesol.webp" alt="Avaliacao cliente 12" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-black text-gray-800 text-sm mb-1">Felipe Gomes • Vicente Pires</p>
+            <p class="text-[11px] text-gray-400 font-bold mb-2">ha 1 semana</p>
+            <p class="text-gray-600 text-sm italic">"Carne de sol muito bem temperada. Pedi para a familia e todo mundo elogiou."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/dep07.webp" alt="Avaliacao cliente 13" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-black text-gray-800 text-sm mb-1">Leticia Rocha • Sudoeste</p>
+            <p class="text-[11px] text-gray-400 font-bold mb-2">ha 1 semana</p>
+            <p class="text-gray-600 text-sm italic">"Ingredientes frescos e pizza muito bonita. Da para ver o cuidado no preparo."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/dep10.webp" alt="Avaliacao cliente 14" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-black text-gray-800 text-sm mb-1">Gustavo Henrique • Nucleo Bandeirante</p>
+            <p class="text-[11px] text-gray-400 font-bold mb-2">ha 8 dias</p>
+            <p class="text-gray-600 text-sm italic">"Entrega rapida mesmo no sabado a noite. Pizza chegou perfeita e bem quente."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/dep20.webp" alt="Avaliacao cliente 15" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-black text-gray-800 text-sm mb-1">Patricia Souza • Ceilandia</p>
+            <p class="text-[11px] text-gray-400 font-bold mb-2">ha 9 dias</p>
+            <p class="text-gray-600 text-sm italic">"Excelente custo-beneficio. O combo vale muito a pena e alimenta bem."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/dep06.webp" alt="Avaliacao cliente 16" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-black text-gray-800 text-sm mb-1">Diego Rodrigues • Samambaia</p>
+            <p class="text-[11px] text-gray-400 font-bold mb-2">ha 10 dias</p>
+            <p class="text-gray-600 text-sm italic">"Massa crocante na borda e macia no meio. Gostei demais da qualidade."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/pizzafoto.webp" alt="Avaliacao cliente 17" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-black text-gray-800 text-sm mb-1">Fernanda Almeida • Lago Norte</p>
+            <p class="text-[11px] text-gray-400 font-bold mb-2">ha 11 dias</p>
+            <p class="text-gray-600 text-sm italic">"Comprei pela primeira vez e me surpreendi. Veio tudo certo e muito gostoso."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/calabresa.webp" alt="Avaliacao cliente 18" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-black text-gray-800 text-sm mb-1">Thiago Martins • Sobradinho</p>
+            <p class="text-[11px] text-gray-400 font-bold mb-2">ha 12 dias</p>
+            <p class="text-gray-600 text-sm italic">"A pizza veio com bastante queijo e a borda bem assada. Recomendo tranquilo."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/frango.webp" alt="Avaliacao cliente 19" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-black text-gray-800 text-sm mb-1">Vanessa Lima • Riacho Fundo</p>
+            <p class="text-[11px] text-gray-400 font-bold mb-2">ha 13 dias</p>
+            <p class="text-gray-600 text-sm italic">"Atendimento rapido pelo pedido e entrega dentro do prazo. Pizza deliciosa."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/portuguesa.webp" alt="Avaliacao cliente 20" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-black text-gray-800 text-sm mb-1">Marcelo Nunes • Cruzeiro</p>
+            <p class="text-[11px] text-gray-400 font-bold mb-2">ha 2 semanas</p>
+            <p class="text-gray-600 text-sm italic">"Portuguesa bem completa, sem economizar nos ingredientes. Nota 10."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/tres.webp" alt="Avaliacao cliente 21" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-black text-gray-800 text-sm mb-1">Amanda Ribeiro • Park Sul</p>
+            <p class="text-[11px] text-gray-400 font-bold mb-2">ha 2 semanas</p>
+            <p class="text-gray-600 text-sm italic">"Pedi para receber amigos em casa e todo mundo perguntou de onde era."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/carnedesol.webp" alt="Avaliacao cliente 22" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-black text-gray-800 text-sm mb-1">Eduardo Carvalho • Planaltina</p>
+            <p class="text-[11px] text-gray-400 font-bold mb-2">ha 2 semanas</p>
+            <p class="text-gray-600 text-sm italic">"Gostei muito do tempero e da massa. Chegou quentinha e bem embalada."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/dep1.webp" alt="Avaliacao cliente 23" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-black text-gray-800 text-sm mb-1">Karina Mendes • Gama</p>
+            <p class="text-[11px] text-gray-400 font-bold mb-2">ha 15 dias</p>
+            <p class="text-gray-600 text-sm italic">"Pizza saborosa, entrega rapida e preco melhor que muita pizzaria da regiao."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/dep07.webp" alt="Avaliacao cliente 24" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-black text-gray-800 text-sm mb-1">Lucas Ferreira • Asa Norte</p>
+            <p class="text-[11px] text-gray-400 font-bold mb-2">ha 16 dias</p>
+            <p class="text-gray-600 text-sm italic">"O combo veio certinho, refrigerante gelado e pizza bem caprichada."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/dep10.webp" alt="Avaliacao cliente 25" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-black text-gray-800 text-sm mb-1">Juliana Silva • Aguas Claras</p>
+            <p class="text-[11px] text-gray-400 font-bold mb-2">ha 17 dias</p>
+            <p class="text-gray-600 text-sm italic">"A melhor que pedi esse mes. Muito recheio e a massa nao veio pesada."</p>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition">
+            <img src="images/dep20.webp" alt="Avaliacao cliente 26" class="w-full h-32 object-cover rounded-xl mb-3" loading="lazy" decoding="async">
+            <div class="flex text-yellow-400 text-xs mb-2">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="font-black text-gray-800 text-sm mb-1">Andre Pereira • Taguatinga Sul</p>
+            <p class="text-[11px] text-gray-400 font-bold mb-2">ha 18 dias</p>
+            <p class="text-gray-600 text-sm italic">"Pedido chegou antes do previsto e a pizza estava com cheiro incrivel. Recomendo."</p>
+        </div>
+
+    </div>
+</section>
+
+    <div class="flex justify-center mb-16">
+        <a href="#menu-pizzas" class="bg-red-600 text-white font-black py-4 px-12 rounded-full shadow-lg hover:bg-red-700 transition transform active:scale-95 uppercase">
+            Pedir Agora
+        </a>
+    </div>
+
+    <footer class="bg-white border-t border-gray-200 py-10 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="font-black text-xl text-[#006437] mb-2 uppercase italic">Pizzaria Italia</h3>
+            <p class="text-gray-500 text-sm mb-6">A verdadeira pizza na sua casa.</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-8 text-xs font-bold text-gray-500 uppercase tracking-widest">
+                <a href="privacidade.html" class="hover:text-red-600">Politicas de Privacidade</a>
+                <span>|</span>
+                <a href="termos.html" class="hover:text-red-600">Termos de Uso</a>
+            </div>
+
+            <p class="text-[10px] text-gray-400 uppercase tracking-tighter">© 2026 Pizzaria Italia | Todos os direitos reservados</p>
+        </div>
+
+<script>
+    let cidadeAtual = "sua regiao";
+
+    // FUNCAO PARA BUSCAR CIDADE DO USUARIO
+    async function buscarLocalizacao() {
+        const elementoCidade = document.getElementById('cidade-usuario');
+        if (elementoCidade) elementoCidade.innerText = 'sua regiao';
+
+        // Primeiro usa a localizacao da propria Cloudflare por IP do visitante.
+        // Mais leve e mais confiavel que depender de API externa no navegador.
+        try {
+            const responseLocal = await fetch('/api/geo', { cache: 'no-store' });
+            const dataLocal = await responseLocal.json();
+            if (dataLocal && dataLocal.city) {
+                cidadeAtual = dataLocal.city;
+                const textoFinalLocal = dataLocal.display || dataLocal.city;
+                if (elementoCidade) elementoCidade.innerText = textoFinalLocal;
+                return;
+            }
+        } catch (e) {
+            console.warn("Geo local falhou, tentando fallback externo...");
+        }
+
+        try {
+            const response = await fetch('https://ipwho.is/');
+            const data = await response.json();
+
+            if (data && data.success && data.city) {
+                cidadeAtual = data.city;
+                const textoFinal = data.region_code ? `${data.city}, ${data.region_code}` : data.city;
+                if (elementoCidade) elementoCidade.innerText = textoFinal;
+                return;
+            }
+        } catch (e) {
+            console.warn("API 1 falhou, tentando Plano B...");
+        }
+
+        try {
+            const responseB = await fetch('https://ipapi.co/json/');
+            const dataB = await responseB.json();
+            if (dataB && dataB.city) {
+                cidadeAtual = dataB.city;
+                const textoFinalB = dataB.region_code ? `${dataB.city}, ${dataB.region_code}` : dataB.city;
+                if (elementoCidade) elementoCidade.innerText = textoFinalB;
+            }
+        } catch (e) {
+            console.error("Todas as APIs falharam.");
+        }
+    }
+
+    // INICIALIZACAO AO CARREGAR PAGINA
+    window.onload = function () {
+        buscarLocalizacao();
+
+        // Timer de 25 minutos
+        const timerDisplays = [document.querySelector('#timer'), document.querySelector('#top-timer')];
+        let duration = 25 * 60;
+        setInterval(() => {
+            let m = parseInt(duration / 60, 10);
+            let s = parseInt(duration % 60, 10);
+            m = m < 10 ? "0" + m : m;
+            s = s < 10 ? "0" + s : s;
+            timerDisplays.forEach(d => { if(d) d.textContent = m + ":" + s; });
+            if (--duration < 0) duration = 25 * 60;
+        }, 1000);
+    };
+</script>
+
+<div id="cartDrawer" class="fixed inset-0 bg-black/55 z-[70] hidden" onclick="if(event.target.id==='cartDrawer')closeCartDrawer()">
+  <aside id="cartDrawerPanelHome" class="absolute right-0 top-0 h-full w-full max-w-[430px] bg-white shadow-2xl flex flex-col translate-x-full transition-transform duration-300">
+    <div class="px-5 py-5 border-b flex justify-between items-center">
+      <div><p class="text-xs font-black text-green-700 uppercase tracking-[0.22em]">Carrinho</p><h2 class="text-2xl font-black text-gray-950">Seu pedido</h2></div>
+      <button onclick="closeCartDrawer()" class="w-11 h-11 rounded-full bg-gray-100 text-2xl">×</button>
+    </div>
+    <div id="cartItemsBox" class="flex-1 overflow-y-auto px-5 py-4 space-y-3 bg-[#fafafa]"></div>
+    <div class="border-t bg-white px-5 pt-4 pb-5 shadow-[0_-12px_35px_rgba(0,0,0,0.08)]">
+      <div class="flex justify-between items-center mb-1"><span class="font-black text-gray-700">Total do pedido</span><span id="cartTotalBox" class="text-2xl font-black text-gray-950">R$ 0,00</span></div>
+      <button onclick="goCheckoutFromCart()" class="w-full bg-green-600 text-white rounded-2xl py-4 font-black text-lg shadow-xl shadow-green-600/20">Finalizar pedido</button>
+      <button onclick="closeCartDrawer()" class="w-full mt-3 bg-gray-100 text-gray-900 rounded-2xl py-4 font-black">Continuar comprando</button>
+    </div>
+  </aside>
+</div>
+<script>
+const CART_KEY='pizza_cart_v1', ORDER_KEY='pizza_order_v1';
+function moneyCart(v){return Number(v||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});}
+function readCart(){try{return JSON.parse(localStorage.getItem(CART_KEY)||'[]')}catch(e){return []}}
+function saveCart(c){localStorage.setItem(CART_KEY,JSON.stringify(c)); }
+function updateCartFloat(){const c=readCart(); const n=c.reduce((s,i)=>s+(i.qty||1),0); const f=document.getElementById('cartFloat'); if(f)f.classList.toggle('hidden',n===0); const cc=document.getElementById('cartCount'); if(cc)cc.textContent=n;}
+function removeCartItem(i){const c=readCart(); c.splice(i,1); saveCart(c); renderCartDrawer();}
+function changeCartQty(i,d){const c=readCart(); c[i].qty=Math.max(1,(c[i].qty||1)+d); saveCart(c); renderCartDrawer();}
+function renderCartDrawer(){const c=readCart(); const box=document.getElementById('cartItemsBox'); const total=c.reduce((s,i)=>s+Number(i.total||0)*(i.qty||1),0); document.getElementById('cartTotalBox').textContent=moneyCart(total); box.innerHTML=c.length?c.map((i,idx)=>`<div class="bg-white border border-gray-100 rounded-[24px] p-3 shadow-sm flex gap-3"><img src="${(i.img||'images/pizzafoto.webp').replace('index.html','')}" class="w-24 h-24 object-cover rounded-2xl" loading="lazy" decoding="async"><div class="flex-1 min-w-0"><div class="flex justify-between gap-2"><div><b class="text-gray-950 leading-tight block">${i.plan||'Combo escolhido'}</b><p class="text-xs text-gray-500 font-semibold mt-1">${i.refri||'Entrega rapida'}</p>${i.stockText?`<div class="cart-scarcity"><i class="fas fa-fire"></i><span>${i.stockText} — finalize agora</span></div>`:''}</div><button onclick="removeCartItem(${idx})" class="text-gray-400 hover:text-red-600 font-black text-xl">×</button></div><div class="flex items-center justify-between mt-3"><div class="flex items-center rounded-full bg-gray-100 p-1"><button onclick="changeCartQty(${idx},-1)" class="w-8 h-8 rounded-full bg-white font-black">−</button><span class="w-8 text-center font-black">${i.qty||1}</span><button onclick="changeCartQty(${idx},1)" class="w-8 h-8 rounded-full bg-white font-black">+</button></div><strong class="text-green-700 font-black">${moneyCart(Number(i.total||0)*(i.qty||1))}</strong></div></div></div>`).join(''):'<div class="bg-white rounded-3xl p-8 text-center text-gray-500 font-bold">Seu carrinho esta vazio.</div>'; }
+function openCartDrawer(){renderCartDrawer(); const o=document.getElementById('cartDrawer'), p=document.getElementById('cartDrawerPanelHome'); o.classList.remove('hidden'); setTimeout(()=>p.classList.remove('translate-x-full'),10);}
+function closeCartDrawer(){const o=document.getElementById('cartDrawer'), p=document.getElementById('cartDrawerPanelHome'); p.classList.add('translate-x-full'); setTimeout(()=>o.classList.add('hidden'),260);}
+function goCheckoutFromCart(){const c=readCart(); if(!c.length)return; location.href='carrinho.html';}
+
+const BURGER_PRODUCTS = [
+  {id:'classic-burger', name:'Classic Burger', price:22.00, img:'images/h1.webp', ingredients:['Pao brioche','Hamburguer bovino 150g','Queijo cheddar derretido','Alface','Tomate','Molho especial','Batata frita crocante inclusa']},
+  {id:'cheddar-bacon', name:'Cheddar Bacon', price:29.90, img:'images/h2.webp', ingredients:['Pao brioche','Hamburguer bovino 180g','Cheddar cremoso','Bacon dourado crocante','Cebola caramelizada','Molho da casa','Batata frita crocante inclusa']},
+  {id:'double-smash', name:'Double Smash', price:32.90, img:'images/h3.webp', ingredients:['Pao brioche','2 hamburgueres smash 90g','Duplo cheddar derretido','Picles','Molho especial','Batata frita crocante inclusa']},
+  {id:'barbecue-supreme', name:'Barbecue Supreme', price:34.90, img:'images/h4.webp', ingredients:['Pao australiano','Hamburguer bovino 180g','Queijo prato','Bacon dourado','Onion rings','Molho barbecue','Batata frita crocante inclusa']},
+  {id:'monster-burguer', name:'Monster Burguer', price:39.90, img:'images/h5.webp', ingredients:['Pao brioche','2 hamburgueres bovinos 150g','Duplo cheddar','Bacon crocante','Alface','Tomate','Molho especial','Batata frita crocante inclusa']}
+];
+const DRINK_PRODUCTS = [
+  {id:'coca-lata', name:'Coca lata', price:5.90, img:'images/latacoca1.webp'},
+  {id:'coca-lata-zero', name:'Coca lata Zero', price:5.90, img:'images/latacoca2.webp'},
+  {id:'antartica-lata', name:'Guarana Antarctica lata', price:5.90, img:'images/lataguarana.webp'},
+  {id:'fanta-lata', name:'Fanta lata', price:5.90, img:'images/lataf2.webp'},
+  {id:'coca-1l', name:'Coca 1L', price:10.90, img:'images/coca1l.webp'},
+  {id:'coca-1l-zero', name:'Coca 1L Zero', price:10.90, img:'images/coca01ld.webp'},
+  {id:'antartica-1l', name:'Guarana Antarctica 1L', price:10.90, img:'images/guaranaant1l.webp'},
+  {id:'coca-2l', name:'Coca 2L', price:12.90, img:'images/coca2l.webp'},
+  {id:'coca-2l-zero', name:'Coca 2L Zero', price:12.90, img:'images/coca2ldiet.png'},
+  {id:'antartica-2l', name:'Guarana 2L', price:12.90, img:'images/gua2l.webp'},
+  {id:'sprite-2l', name:'Sprite 2L', price:12.90, img:'images/sprite2l.webp'},
+  {id:'sprite-zero-2l', name:'Sprite Zero 2L', price:12.90, img:'images/spritezero.webp'},
+  {id:'fanta-2l', name:'Fanta 2L', price:12.90, img:'images/fata2l.webp'}
+];
+
+const MAIN_COMBOS = [
+  {id:'combo1', plan:'02 Pizzas PP + 1 Refrigerante 1 Litro', total:32.90, img:'images/pizzafoto.webp', refri:'Refrigerante 1L incluso', stockText:''},
+  {id:'combo2', plan:'02 Pizzas P + 1 Refrigerante 1 Litro', total:49.90, img:'images/pizzafoto.webp', refri:'Refrigerante 1L incluso', stockText:''},
+  {id:'combo3', plan:'02 Pizzas M + 1 Refrigerante 2 Litros', total:55.90, img:'images/pizzafoto.webp', refri:'Refrigerante 2L incluso', stockText:''},
+  {id:'combo4', plan:'02 Pizzas G + 1 Refrigerante 2 Litros', total:64.90, img:'images/pizzafoto.webp', refri:'Refrigerante 2L incluso', stockText:'Restam 03 unidades'},
+  {id:'combo5', plan:'02 Pizzas Gigantes + 2 Refrigerantes 2 Litros', total:73.80, img:'images/pizzafoto.webp', refri:'2 Refrigerantes 2L inclusos', stockText:'Restam 02 unidades'},
+  {id:'combo6', plan:'03 Pizzas Gigantes + 2 Refrigerantes 2 Litros', total:99.80, img:'images/plano3.webp', refri:'2 Refrigerantes 2L inclusos', stockText:'Restam 01 unidade'}
+];
+function addMainComboToCart(id){
+  const item = MAIN_COMBOS.find(x=>x.id===id); if(!item) return;
+  const c = readCart();
+  c.push({...item, qty:1, observacao:'Escolha os sabores no atendimento', items:[{id:item.id,name:item.plan,price:item.total,qty:1}]});
+  saveCart(c); openCartDrawer();
+}
+
+const SPECIAL_COMBO_PRODUCTS = [
+  {id:'combo-calabresa', name:'01 Pizza Media Calabresa', price:49.90, img:'images/calabresa.webp', includes:['Pizza media sabor Calabresa','01 refrigerante 1L incluso'], checkoutLink:'https://pay.cardapiodigital-food.shop/6a4d954b274583ddbf1ba5a7'},
+  {id:'combo-carne-de-sol', name:'01 Pizza Media Carne de Sol', price:49.90, img:'images/carnedesol.webp', includes:['Pizza media sabor Carne de Sol','01 refrigerante 1L incluso'], checkoutLink:'https://pay.cardapiodigital-food.shop/6a4d954b274583ddbf1ba5a7'},
+  {id:'combo-marguerita', name:'01 Pizza Media Marguerita', price:49.90, img:'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80', includes:['Pizza media sabor Marguerita','01 refrigerante 1L incluso'], checkoutLink:'https://pay.cardapiodigital-food.shop/6a4d954b274583ddbf1ba5a7'},
+  {id:'combo-frango-catupiry', name:'01 Pizza Media Frango Catupiry', price:49.90, img:'images/frango.webp', stockText:'Restam 03 unidades', includes:['Pizza media sabor Frango Catupiry','01 refrigerante 1L incluso'], checkoutLink:'https://pay.cardapiodigital-food.shop/6a4d954b274583ddbf1ba5a7'},
+  {id:'combo-portuguesa', name:'01 Pizza Media Portuguesa', price:49.90, img:'images/portuguesa.webp', stockText:'Restam 02 unidades', includes:['Pizza media sabor Portuguesa','01 refrigerante 1L incluso'], checkoutLink:'https://pay.cardapiodigital-food.shop/6a4d954b274583ddbf1ba5a7'},
+  {id:'combo-tres-queijos', name:'01 Pizza Media Tres Queijos', price:49.90, img:'images/tres.webp', stockText:'Restam 01 unidades', includes:['Pizza media sabor Tres Queijos','01 refrigerante 1L incluso'], checkoutLink:'https://pay.cardapiodigital-food.shop/6a4d954b274583ddbf1ba5a7'}
+];
+
+const DESSERT_PRODUCTS = [
+  {id:'delicia-abacaxi', name:'Delicia de abacaxi', price:9.90, img:'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=500&q=80'},
+  {id:'mousse-maracuja', name:'Mousse de maracuja', price:8.90, img:'https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=500&q=80'},
+  {id:'mousse-limao', name:'Mousse de limao', price:8.90, img:'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=500&q=80'},
+  {id:'mousse-chocolate', name:'Mousse chocolate', price:9.90, img:'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=500&q=80'}
+];
+let selectedSpecialCombo = null;
+function openSpecialComboModal(id){
+  selectedSpecialCombo=SPECIAL_COMBO_PRODUCTS.find(c=>c.id===id); if(!selectedSpecialCombo) return;
+  document.getElementById('specialComboImg').src=selectedSpecialCombo.img;
+  document.getElementById('specialComboTitle').textContent=selectedSpecialCombo.name+' + 01 Refri 1L';
+  document.getElementById('specialComboPrice').textContent=moneyCart(selectedSpecialCombo.price);
+  document.getElementById('specialComboItems').innerHTML=selectedSpecialCombo.includes.map(i=>`<li class="flex gap-2"><span class="text-green-600">✓</span><span>${i}</span></li>`).join('');
+  document.getElementById('specialComboDrinkSelect').value='Coca-Cola 1L';
+  document.getElementById('specialComboObs').value='';
+  document.querySelectorAll('.combo-drink-card').forEach((b,idx)=>{b.classList.remove('border-red-500','bg-red-50'); b.classList.add('border-gray-100','bg-white'); if(idx===0){b.classList.remove('border-gray-100','bg-white'); b.classList.add('border-red-500','bg-red-50')}});
+  document.getElementById('specialComboModal').classList.remove('hidden');
+}
+function closeSpecialComboModal(){document.getElementById('specialComboModal').classList.add('hidden');}
+function selectSpecialComboDrink(btn){const sel=document.getElementById('specialComboDrinkSelect'); if(sel) sel.value=btn.dataset.drink; document.querySelectorAll('.combo-drink-card').forEach(b=>{b.classList.remove('border-red-500','bg-red-50'); b.classList.add('border-gray-100','bg-white')}); btn.classList.remove('border-gray-100','bg-white'); btn.classList.add('border-red-500','bg-red-50');}
+function addCurrentSpecialComboToCart(){
+  if(!selectedSpecialCombo) return;
+  const drink=document.getElementById('specialComboDrinkSelect').value;
+  const obs=document.getElementById('specialComboObs').value.trim();
+  const comboName=selectedSpecialCombo.name+' + '+drink;
+  const c=readCart();
+  c.push({id:selectedSpecialCombo.id, plan:selectedSpecialCombo.name+' + 01 Refri 1L', total:selectedSpecialCombo.price, qty:1, img:selectedSpecialCombo.img, stockText:selectedSpecialCombo.stockText, refri:'Refrigerante incluso: '+drink, observacao:obs, items:[{id:selectedSpecialCombo.id,name:comboName,price:selectedSpecialCombo.price,qty:1}]});
+  saveCart(c); closeSpecialComboModal(); openCartDrawer();
+}
+function addCurrentSpecialComboAndCheckout(){
+  if(!selectedSpecialCombo) return;
+  const drink=document.getElementById('specialComboDrinkSelect').value;
+  const obs=document.getElementById('specialComboObs').value.trim();
+  const comboName=selectedSpecialCombo.name+' + '+drink;
+  const c=readCart();
+  c.push({id:selectedSpecialCombo.id, plan:selectedSpecialCombo.name+' + 01 Refri 1L', total:selectedSpecialCombo.price, qty:1, img:selectedSpecialCombo.img, stockText:selectedSpecialCombo.stockText, refri:'Refrigerante incluso: '+drink, observacao:obs, items:[{id:selectedSpecialCombo.id,name:comboName,price:selectedSpecialCombo.price,qty:1}]});
+  saveCart(c); location.href='carrinho.html';
+}
+function addCurrentSpecialComboKeepShopping(){
+  if(!selectedSpecialCombo) return;
+  const drink=document.getElementById('specialComboDrinkSelect').value;
+  const obs=document.getElementById('specialComboObs').value.trim();
+  const comboName=selectedSpecialCombo.name+' + '+drink;
+  const c=readCart();
+  c.push({id:selectedSpecialCombo.id, plan:selectedSpecialCombo.name+' + 01 Refri 1L', total:selectedSpecialCombo.price, qty:1, img:selectedSpecialCombo.img, stockText:selectedSpecialCombo.stockText, refri:'Refrigerante incluso: '+drink, observacao:obs, items:[{id:selectedSpecialCombo.id,name:comboName,price:selectedSpecialCombo.price,qty:1}]});
+  saveCart(c); closeSpecialComboModal();
+}
+
+let selectedBurger = null;
+function renderBurgerSection(){
+  const grid=document.getElementById('burgerGrid');
+  if(grid) grid.innerHTML=BURGER_PRODUCTS.map(b=>`<div onclick="openBurgerModal('${b.id}')" class="burger-card-compact bg-white p-3 rounded-3xl flex gap-4 card-shadow cursor-pointer active:scale-95 transition border border-gray-100 overflow-hidden"><img src="${b.img}" class="w-28 h-28 object-cover rounded-2xl" loading="lazy" decoding="async"><div class="flex-1 min-w-0"><h3 class="font-black text-gray-900 leading-tight mb-1">${b.name}</h3><p class="text-[11px] text-gray-500 font-bold mb-2 line-clamp-2">${b.ingredients.slice(0,4).join(' • ')}</p><span class="inline-flex bg-red-50 text-red-600 text-[10px] font-black px-2 py-1 rounded-full mb-2">+ batata e refri lata</span><div class="flex justify-between items-end"><span class="burger-price font-black text-2xl text-gray-900">${moneyCart(b.price)}</span><button class="w-8 h-8 rounded-full bg-red-600 text-white"><i class="fas fa-plus text-xs"></i></button></div></div></div>`).join('');
+}
+function renderDrinkCarousel(){
+  const box=document.getElementById('drinkCarousel');
+  if(box) box.innerHTML=DRINK_PRODUCTS.map(d=>`<div class="drink-card-premium snap-start bg-white rounded-3xl p-3 card-shadow border border-gray-100"><img src="${d.img}" class="w-full rounded-2xl mb-3" alt="${d.name}" loading="lazy" decoding="async"><h3 class="font-black text-sm text-gray-900 leading-tight min-h-[38px]">${d.name}</h3><div class="flex items-center justify-between mt-3"><span class="font-black text-green-700">${moneyCart(d.price)}</span><button onclick="addDrinkToCart('${d.id}')" class="w-9 h-9 rounded-full bg-red-600 text-white shadow-lg"><i class="fas fa-plus text-xs"></i></button></div></div>`).join('');
+}
+function openBurgerModal(id){
+  selectedBurger=BURGER_PRODUCTS.find(b=>b.id===id); if(!selectedBurger) return;
+  document.getElementById('burgerModalImg').src=selectedBurger.img;
+  document.getElementById('burgerModalTitle').textContent=selectedBurger.name;
+  document.getElementById('burgerModalPrice').textContent=moneyCart(selectedBurger.price);
+  document.getElementById('burgerModalIngredients').innerHTML=selectedBurger.ingredients.map(i=>`<li class="flex gap-2"><span class="text-green-600">✓</span><span>${i}</span></li>`).join('');
+  document.getElementById('burgerDrinkSelect').value='Coca-Cola lata';
+  document.getElementById('burgerObs').value='';
+  document.getElementById('burgerModal').classList.remove('hidden');
+}
+function closeBurgerModal(){document.getElementById('burgerModal').classList.add('hidden');}
+function selectBurgerDrink(btn){const sel=document.getElementById('burgerDrinkSelect'); if(sel) sel.value=btn.dataset.drink; document.querySelectorAll('.drink-card').forEach(b=>{b.classList.remove('border-red-500','bg-red-50'); b.classList.add('border-gray-100','bg-white')}); btn.classList.remove('border-gray-100','bg-white'); btn.classList.add('border-red-500','bg-red-50');}
+function addCurrentBurgerToCart(){
+  if(!selectedBurger) return;
+  const drink=document.getElementById('burgerDrinkSelect').value;
+  const obs=document.getElementById('burgerObs').value.trim();
+  const c=readCart();
+  c.push({id:selectedBurger.id, plan:selectedBurger.name, total:selectedBurger.price, qty:1, img:selectedBurger.img, refri:'Refrigerante incluso: '+drink, observacao:obs, items:[{id:selectedBurger.id,name:selectedBurger.name+' + '+drink,price:selectedBurger.price,qty:1}]});
+  saveCart(c); closeBurgerModal(); openCartDrawer();
+}
+function addCurrentBurgerAndCheckout(){
+  if(!selectedBurger) return;
+  const drink=document.getElementById('burgerDrinkSelect').value;
+  const obs=document.getElementById('burgerObs').value.trim();
+  const c=readCart();
+  c.push({id:selectedBurger.id, plan:selectedBurger.name, total:selectedBurger.price, qty:1, img:selectedBurger.img, refri:'Refrigerante incluso: '+drink, observacao:obs, items:[{id:selectedBurger.id,name:selectedBurger.name+' + '+drink,price:selectedBurger.price,qty:1}]});
+  saveCart(c); location.href='carrinho.html';
+}
+function addCurrentBurgerKeepShopping(){
+  if(!selectedBurger) return;
+  const drink=document.getElementById('burgerDrinkSelect').value;
+  const obs=document.getElementById('burgerObs').value.trim();
+  const c=readCart();
+  c.push({id:selectedBurger.id, plan:selectedBurger.name, total:selectedBurger.price, qty:1, img:selectedBurger.img, refri:'Refrigerante incluso: '+drink, observacao:obs, items:[{id:selectedBurger.id,name:selectedBurger.name+' + '+drink,price:selectedBurger.price,qty:1}]});
+  saveCart(c); closeBurgerModal();
+}
+function addDrinkToCart(id){
+  const d=DRINK_PRODUCTS.find(x=>x.id===id); if(!d) return false;
+  const c=readCart();
+  const ex=c.find(i=>i.id===d.id);
+  if(ex){ ex.qty=(ex.qty||1)+1; }
+  else { c.push({id:d.id, plan:d.name, total:d.price, qty:1, img:d.img, refri:'Bebida gelada', observacao:'', items:[{id:d.id,name:d.name,price:d.price,qty:1}]}); }
+  saveCart(c); updateCartFloat(); openCartDrawer();
+  return false;
+}
+renderBurgerSection();
+renderDrinkCarousel();
+function renderDessertBox(){
+  const box=document.getElementById('cartDessertBox'); if(!box) return;
+  box.innerHTML=`<div class="flex items-center justify-between gap-2 mb-2"><div><p class="text-[10px] font-black text-orange-700 uppercase tracking-[0.18em]">Sobremesa</p><b class="text-sm text-gray-900">Quer adicionar uma delicia?</b></div><span class="text-[11px] font-black text-orange-700">+</span></div><div class="flex gap-2 overflow-x-auto pb-1">${DESSERT_PRODUCTS.map(d=>`<button onclick="addDessertToCart('${d.id}')" class="min-w-[150px] bg-white rounded-xl border border-orange-100 p-2 text-left flex gap-2 items-center active:scale-95 transition"><img src="${d.img}" class="w-10 h-10 object-cover rounded-lg" loading="lazy" decoding="async"><span class="flex-1 min-w-0"><b class="block text-[12px] leading-tight text-gray-900 truncate">${d.name}</b><small class="font-black text-green-700">${moneyCart(d.price)}</small></span><span class="w-7 h-7 rounded-full bg-orange-500 text-white font-black grid place-items-center">+</span></button>`).join('')}</div>`;
+}
+function addDessertToCart(id){
+  const d=DESSERT_PRODUCTS.find(x=>x.id===id); if(!d) return;
+  const c=readCart(); c.push({id:d.id, plan:d.name, total:d.price, qty:1, img:d.img, refri:'Sobremesa adicional', items:[{id:d.id,name:d.name,price:d.price,qty:1}]}); saveCart(c); renderCartDrawer();
+}
+
+</script>
+
+</footer></body>
+<!-- Mirrored from pizzarevoitalia.lovable.app/home.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Aug 2026 04:41:15 GMT -->
+</html>
